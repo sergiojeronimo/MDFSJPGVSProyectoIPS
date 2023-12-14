@@ -1,0 +1,32 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\1033\MDFSJPGVSProyectoIPS</RelativePathOnDisk>
+    <TemplateFileName>CSharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{eb17e5c2-66e5-4773-b0e9-4dba003c9e7b}</TemplateID>
+        <Name Package="{a58a905c-88c3-4630-9474-5ef601f2dd1a}" ID="103" />
+        <Description Package="{a58a905c-88c3-4630-9474-5ef601f2dd1a}" ID="102" />
+        <Icon Package="{a58a905c-88c3-4630-9474-5ef601f2dd1a}" ID="201" />
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPS</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>VisualBasic\1033\MDFSJPGVSProyectoIPS</RelativePathOnDisk>
+    <TemplateFileName>VisualBasic.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{fa2a61e9-abf4-40f3-9a70-a712bb33c44c}</TemplateID>
+        <Name Package="{a58a905c-88c3-4630-9474-5ef601f2dd1a}" ID="103" />
+        <Description Package="{a58a905c-88c3-4630-9474-5ef601f2dd1a}" ID="102" />
+        <Icon Package="{a58a905c-88c3-4630-9474-5ef601f2dd1a}" ID="201" />
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPS</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>
