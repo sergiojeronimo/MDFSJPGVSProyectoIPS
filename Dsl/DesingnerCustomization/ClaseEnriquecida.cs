@@ -10,13 +10,13 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
     {
         public string GetNombreCompletoEValue()
         {
-            if (this.Nombre == "")
+            if (this.NombreClase == "")
             {
                 return string.Format("<< Enriquecida : [nombre] >>");
             }
             else
             {
-                return string.Format("<< Enriquecida : {0} >>", this.Nombre);
+                return string.Format("<< Enriquecida : {0} >>", this.NombreClase);
             }
         }
         public void SetNombreCompletoEValue(String newValue)

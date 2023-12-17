@@ -149,13 +149,13 @@
     <value>Clase</value>
     <comment>DisplayName for DomainClass &apos;Clase&apos;</comment>
   </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.Clase/Nombre.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.Clase.Nombre</value>
-    <comment>Description for DomainProperty &apos;Nombre&apos; on DomainClass &apos;Clase&apos;</comment>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.Clase/NombreClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.Clase.Nombre Clase</value>
+    <comment>Description for DomainProperty &apos;NombreClase&apos; on DomainClass &apos;Clase&apos;</comment>
   </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.Clase/Nombre.DisplayName" xml:space="preserve">
-    <value>Nombre</value>
-    <comment>DisplayName for DomainProperty &apos;Nombre&apos; on DomainClass &apos;Clase&apos;</comment>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.Clase/NombreClase.DisplayName" xml:space="preserve">
+    <value>Nombre Clase</value>
+    <comment>DisplayName for DomainProperty &apos;NombreClase&apos; on DomainClass &apos;Clase&apos;</comment>
   </data>
   <data name="UPM_IPS.MDFSJPGVSProyectoIPS.Clase/NombreCompleto.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.Clase.Nombre Completo</value>

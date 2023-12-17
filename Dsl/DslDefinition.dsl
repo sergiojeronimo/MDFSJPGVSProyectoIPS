@@ -22,7 +22,7 @@
     </DomainClass>
     <DomainClass Id="e06c30db-a6b2-4823-91e6-069b58a15b1c" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.Clase" Name="Clase" DisplayName="Clase" Namespace="UPM_IPS.MDFSJPGVSProyectoIPS">
       <Properties>
-        <DomainProperty Id="4e9eea82-c15d-49fe-be56-aff32ea9a2dc" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.Clase.Nombre" Name="Nombre" DisplayName="Nombre">
+        <DomainProperty Id="4e9eea82-c15d-49fe-be56-aff32ea9a2dc" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.Clase.Nombre Clase" Name="NombreClase" DisplayName="Nombre Clase">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -590,8 +590,8 @@
       <XmlClassData TypeName="Clase" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseMoniker" ElementName="clase" MonikerTypeName="ClaseMoniker">
         <DomainClassMoniker Name="Clase" />
         <ElementData>
-          <XmlPropertyData XmlName="nombre">
-            <DomainPropertyMoniker Name="Clase/Nombre" />
+          <XmlPropertyData XmlName="nombreClase">
+            <DomainPropertyMoniker Name="Clase/NombreClase" />
           </XmlPropertyData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
             <DomainRelationshipMoniker Name="ClaseHasAtributo" />

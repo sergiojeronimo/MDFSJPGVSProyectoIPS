@@ -113,7 +113,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			return new DomainMemberInfo[]
 			{
 				new DomainMemberInfo(typeof(TapizDiagramaClases), "solucionDiagramaClases", TapizDiagramaClases.solucionDiagramaClasesDomainPropertyId, typeof(TapizDiagramaClases.solucionDiagramaClasesPropertyHandler)),
-				new DomainMemberInfo(typeof(Clase), "Nombre", Clase.NombreDomainPropertyId, typeof(Clase.NombrePropertyHandler)),
+				new DomainMemberInfo(typeof(Clase), "NombreClase", Clase.NombreClaseDomainPropertyId, typeof(Clase.NombreClasePropertyHandler)),
 				new DomainMemberInfo(typeof(Clase), "NombreCompleto", Clase.NombreCompletoDomainPropertyId, typeof(Clase.NombreCompletoPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseEnriquecida), "NombreCompletoE", ClaseEnriquecida.NombreCompletoEDomainPropertyId, typeof(ClaseEnriquecida.NombreCompletoEPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloOperacion), "TipoLetra", EstiloOperacion.TipoLetraDomainPropertyId, typeof(EstiloOperacion.TipoLetraPropertyHandler)),
