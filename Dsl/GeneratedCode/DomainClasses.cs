@@ -290,59 +290,59 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		{
 		}
 		#endregion
-		#region Nombre domain property code
+		#region NombreClase domain property code
 		
 		/// <summary>
-		/// Nombre domain property Id.
+		/// NombreClase domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid NombreDomainPropertyId = new global::System.Guid(0x4e9eea82, 0xc15d, 0x49fe, 0xbe, 0x56, 0xaf, 0xf3, 0x2e, 0xa9, 0xa2, 0xdc);
+		public static readonly global::System.Guid NombreClaseDomainPropertyId = new global::System.Guid(0x4e9eea82, 0xc15d, 0x49fe, 0xbe, 0x56, 0xaf, 0xf3, 0x2e, 0xa9, 0xa2, 0xdc);
 		
 		/// <summary>
-		/// Storage for Nombre
+		/// Storage for NombreClase
 		/// </summary>
-		private global::System.String nombrePropertyStorage = string.Empty;
+		private global::System.String nombreClasePropertyStorage = string.Empty;
 		
 		/// <summary>
-		/// Gets or sets the value of Nombre domain property.
-		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.Clase.Nombre
+		/// Gets or sets the value of NombreClase domain property.
+		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.Clase.Nombre Clase
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.MDFSJPGVSProyectoIPS.Clase/Nombre.DisplayName", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.Clase/Nombre.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("UPM_IPS.MDFSJPGVSProyectoIPS.Clase/NombreClase.DisplayName", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.Clase/NombreClase.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("4e9eea82-c15d-49fe-be56-aff32ea9a2dc")]
-		public global::System.String Nombre
+		public global::System.String NombreClase
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return nombrePropertyStorage;
+				return nombreClasePropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				NombrePropertyHandler.Instance.SetValue(this, value);
+				NombreClasePropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the Clase.Nombre domain property.
+		/// Value handler for the Clase.NombreClase domain property.
 		/// </summary>
-		internal sealed partial class NombrePropertyHandler : DslModeling::DomainPropertyValueHandler<Clase, global::System.String>
+		internal sealed partial class NombreClasePropertyHandler : DslModeling::DomainPropertyValueHandler<Clase, global::System.String>
 		{
-			private NombrePropertyHandler() { }
+			private NombreClasePropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Clase.Nombre domain property value handler.
+			/// Gets the singleton instance of the Clase.NombreClase domain property value handler.
 			/// </summary>
-			public static readonly NombrePropertyHandler Instance = new NombrePropertyHandler();
+			public static readonly NombreClasePropertyHandler Instance = new NombreClasePropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Clase.Nombre domain property.
+			/// Gets the Id of the Clase.NombreClase domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return NombreDomainPropertyId;
+					return NombreClaseDomainPropertyId;
 				}
 			}
 			
@@ -354,7 +354,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			public override sealed global::System.String GetValue(Clase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.nombrePropertyStorage;
+				return element.nombreClasePropertyStorage;
 			}
 		
 			/// <summary>
@@ -370,7 +370,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.nombrePropertyStorage = newValue;
+					element.nombreClasePropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}

@@ -942,20 +942,20 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			Clase instanceOfClase = element as Clase;
 			global::System.Diagnostics.Debug.Assert(instanceOfClase != null, "Expecting an instance of Clase");
 	
-			// Nombre
+			// NombreClase
 			if (!serializationContext.Result.Failed)
 			{
-				string attribNombre = MDFSJPGVSProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "nombre");
-				if (attribNombre != null)
+				string attribNombreClase = MDFSJPGVSProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "nombreClase");
+				if (attribNombreClase != null)
 				{
-					global::System.String valueOfNombre;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribNombre, out valueOfNombre))
+					global::System.String valueOfNombreClase;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribNombreClase, out valueOfNombreClase))
 					{
-						instanceOfClase.Nombre = valueOfNombre;
+						instanceOfClase.NombreClase = valueOfNombreClase;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nombre", typeof(global::System.String), attribNombre);
+						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nombreClase", typeof(global::System.String), attribNombreClase);
 					}
 				}
 			}
@@ -1647,14 +1647,14 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			Clase instanceOfClase = element as Clase;
 			global::System.Diagnostics.Debug.Assert(instanceOfClase != null, "Expecting an instance of Clase");
 	
-			// Nombre
+			// NombreClase
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfClase.Nombre;
+				global::System.String propValue = instanceOfClase.NombreClase;
 				if (!serializationContext.Result.Failed)
 				{
 					if (!string.IsNullOrEmpty(propValue))
-						MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombre", propValue);
+						MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombreClase", propValue);
 	
 				}
 			}

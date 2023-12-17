@@ -134,8 +134,8 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <!-- Property: Nombre -->
-        <xsd:attribute name="nombre" type="xsd:string" />
+        <!-- Property: NombreClase -->
+        <xsd:attribute name="nombreClase" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
