@@ -2696,20 +2696,20 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 					}
 				}
 			}
-			// TipoColor
+			// ColorLetra
 			if (!serializationContext.Result.Failed)
 			{
-				string attribTipoColor = MDFSJPGVSProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoColor");
-				if (attribTipoColor != null)
+				string attribColorLetra = MDFSJPGVSProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetra");
+				if (attribColorLetra != null)
 				{
-					TipoColorEnum valueOfTipoColor;
-					if (DslModeling::SerializationUtilities.TryGetValue<TipoColorEnum>(serializationContext, attribTipoColor, out valueOfTipoColor))
+					global::System.String valueOfColorLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribColorLetra, out valueOfColorLetra))
 					{
-						instanceOfEstiloOperacion.TipoColor = valueOfTipoColor;
+						instanceOfEstiloOperacion.ColorLetra = valueOfColorLetra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoColor", typeof(TipoColorEnum), attribTipoColor);
+						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(global::System.String), attribColorLetra);
 					}
 				}
 			}
@@ -3148,14 +3148,15 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 					MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", serializedPropValue);
 				}
 			}
-			// TipoColor
+			// ColorLetra
 			if (!serializationContext.Result.Failed)
 			{
-				TipoColorEnum propValue = instanceOfEstiloOperacion.TipoColor;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoColorEnum>(serializationContext, propValue);
+				global::System.String propValue = instanceOfEstiloOperacion.ColorLetra;
 				if (!serializationContext.Result.Failed)
 				{
-					MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoColor", serializedPropValue);
+					if (!string.IsNullOrEmpty(propValue))
+						MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", propValue);
+	
 				}
 			}
 		}
@@ -3377,14 +3378,14 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 				string attribAlineacion = MDFSJPGVSProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "alineacion");
 				if (attribAlineacion != null)
 				{
-					global::System.String valueOfAlineacion;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribAlineacion, out valueOfAlineacion))
+					AlineacionEnum valueOfAlineacion;
+					if (DslModeling::SerializationUtilities.TryGetValue<AlineacionEnum>(serializationContext, attribAlineacion, out valueOfAlineacion))
 					{
 						instanceOfEstiloClase.Alineacion = valueOfAlineacion;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "alineacion", typeof(global::System.String), attribAlineacion);
+						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "alineacion", typeof(AlineacionEnum), attribAlineacion);
 					}
 				}
 			}
@@ -3394,14 +3395,14 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 				string attribColorFondo = MDFSJPGVSProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorFondo");
 				if (attribColorFondo != null)
 				{
-					ColorFondoEnum valueOfColorFondo;
-					if (DslModeling::SerializationUtilities.TryGetValue<ColorFondoEnum>(serializationContext, attribColorFondo, out valueOfColorFondo))
+					global::System.String valueOfColorFondo;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribColorFondo, out valueOfColorFondo))
 					{
 						instanceOfEstiloClase.ColorFondo = valueOfColorFondo;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorFondo", typeof(ColorFondoEnum), attribColorFondo);
+						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorFondo", typeof(global::System.String), attribColorFondo);
 					}
 				}
 			}
@@ -3810,22 +3811,22 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			// Alineacion
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstiloClase.Alineacion;
+				AlineacionEnum propValue = instanceOfEstiloClase.Alineacion;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<AlineacionEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "alineacion", propValue);
-	
+					MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "alineacion", serializedPropValue);
 				}
 			}
 			// ColorFondo
 			if (!serializationContext.Result.Failed)
 			{
-				ColorFondoEnum propValue = instanceOfEstiloClase.ColorFondo;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<ColorFondoEnum>(serializationContext, propValue);
+				global::System.String propValue = instanceOfEstiloClase.ColorFondo;
 				if (!serializationContext.Result.Failed)
 				{
-					MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorFondo", serializedPropValue);
+					if (!string.IsNullOrEmpty(propValue))
+						MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorFondo", propValue);
+	
 				}
 			}
 		}
@@ -10192,14 +10193,14 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 				string attribCardinalidadFin = MDFSJPGVSProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinalidadFin");
 				if (attribCardinalidadFin != null)
 				{
-					global::System.String valueOfCardinalidadFin;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribCardinalidadFin, out valueOfCardinalidadFin))
+					CardinalidadesEnum valueOfCardinalidadFin;
+					if (DslModeling::SerializationUtilities.TryGetValue<CardinalidadesEnum>(serializationContext, attribCardinalidadFin, out valueOfCardinalidadFin))
 					{
 						instanceOfAsociacion.CardinalidadFin = valueOfCardinalidadFin;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadFin", typeof(global::System.String), attribCardinalidadFin);
+						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadFin", typeof(CardinalidadesEnum), attribCardinalidadFin);
 					}
 				}
 			}
@@ -10209,14 +10210,14 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 				string attribCardinalidadInit = MDFSJPGVSProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinalidadInit");
 				if (attribCardinalidadInit != null)
 				{
-					global::System.String valueOfCardinalidadInit;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribCardinalidadInit, out valueOfCardinalidadInit))
+					CardinalidadesEnum valueOfCardinalidadInit;
+					if (DslModeling::SerializationUtilities.TryGetValue<CardinalidadesEnum>(serializationContext, attribCardinalidadInit, out valueOfCardinalidadInit))
 					{
 						instanceOfAsociacion.CardinalidadInit = valueOfCardinalidadInit;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadInit", typeof(global::System.String), attribCardinalidadInit);
+						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadInit", typeof(CardinalidadesEnum), attribCardinalidadInit);
 					}
 				}
 			}
@@ -10720,23 +10721,21 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			// CardinalidadFin
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfAsociacion.CardinalidadFin;
+				CardinalidadesEnum propValue = instanceOfAsociacion.CardinalidadFin;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<CardinalidadesEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadFin", propValue);
-	
+					MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadFin", serializedPropValue);
 				}
 			}
 			// CardinalidadInit
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfAsociacion.CardinalidadInit;
+				CardinalidadesEnum propValue = instanceOfAsociacion.CardinalidadInit;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<CardinalidadesEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadInit", propValue);
-	
+					MDFSJPGVSProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadInit", serializedPropValue);
 				}
 			}
 		}

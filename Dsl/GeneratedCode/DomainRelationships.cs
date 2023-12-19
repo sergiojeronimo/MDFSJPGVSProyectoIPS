@@ -1223,7 +1223,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		/// <summary>
 		/// Storage for CardinalidadFin
 		/// </summary>
-		private global::System.String cardinalidadFinPropertyStorage = string.Empty;
+		private CardinalidadesEnum cardinalidadFinPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of CardinalidadFin domain property.
@@ -1232,7 +1232,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.MDFSJPGVSProyectoIPS.Asociacion/CardinalidadFin.DisplayName", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.Asociacion/CardinalidadFin.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("59d244de-9574-45c0-b4ce-402cb6cd2a9f")]
-		public global::System.String CardinalidadFin
+		public CardinalidadesEnum CardinalidadFin
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1248,7 +1248,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		/// <summary>
 		/// Value handler for the Asociacion.CardinalidadFin domain property.
 		/// </summary>
-		internal sealed partial class CardinalidadFinPropertyHandler : DslModeling::DomainPropertyValueHandler<Asociacion, global::System.String>
+		internal sealed partial class CardinalidadFinPropertyHandler : DslModeling::DomainPropertyValueHandler<Asociacion, CardinalidadesEnum>
 		{
 			private CardinalidadFinPropertyHandler() { }
 		
@@ -1274,7 +1274,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Asociacion element)
+			public override sealed CardinalidadesEnum GetValue(Asociacion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.cardinalidadFinPropertyStorage;
@@ -1285,11 +1285,11 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Asociacion element, global::System.String newValue)
+			public override sealed void SetValue(Asociacion element, CardinalidadesEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				CardinalidadesEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1310,7 +1310,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		/// <summary>
 		/// Storage for CardinalidadInit
 		/// </summary>
-		private global::System.String cardinalidadInitPropertyStorage = string.Empty;
+		private CardinalidadesEnum cardinalidadInitPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of CardinalidadInit domain property.
@@ -1319,7 +1319,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.MDFSJPGVSProyectoIPS.Asociacion/CardinalidadInit.DisplayName", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.Asociacion/CardinalidadInit.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("7ea4d277-7c78-4da5-a3ba-8f750279210d")]
-		public global::System.String CardinalidadInit
+		public CardinalidadesEnum CardinalidadInit
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1335,7 +1335,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		/// <summary>
 		/// Value handler for the Asociacion.CardinalidadInit domain property.
 		/// </summary>
-		internal sealed partial class CardinalidadInitPropertyHandler : DslModeling::DomainPropertyValueHandler<Asociacion, global::System.String>
+		internal sealed partial class CardinalidadInitPropertyHandler : DslModeling::DomainPropertyValueHandler<Asociacion, CardinalidadesEnum>
 		{
 			private CardinalidadInitPropertyHandler() { }
 		
@@ -1361,7 +1361,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Asociacion element)
+			public override sealed CardinalidadesEnum GetValue(Asociacion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.cardinalidadInitPropertyStorage;
@@ -1372,11 +1372,11 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Asociacion element, global::System.String newValue)
+			public override sealed void SetValue(Asociacion element, CardinalidadesEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				CardinalidadesEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

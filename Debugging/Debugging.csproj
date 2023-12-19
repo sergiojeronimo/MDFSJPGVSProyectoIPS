@@ -69,6 +69,63 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Anuncio.java">
+      <DependentUpon>GeneracionClases.tt</DependentUpon>
+    </Content>
+    <Content Include="AnuncioEnriquecido.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="AnuncioEnriquecidoAlta.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="AnuncioEnriquecidoListado.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="Cancion.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="Cancion.java">
+      <DependentUpon>GeneracionClases.tt</DependentUpon>
+    </Content>
+    <Content Include="CancionAlta.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="CancionListado.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="Cuota.java">
+      <DependentUpon>GeneracionClases.tt</DependentUpon>
+    </Content>
+    <Content Include="GeneracionClases.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GeneracionClases.txt</LastGenOutput>
+    </Content>
+    <Content Include="GeneracionClases.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneracionClases.tt</DependentUpon>
+    </Content>
+    <Content Include="GeneracionHTMLs.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GeneracionHTMLs.txt</LastGenOutput>
+    </Content>
+    <Content Include="GeneracionHTMLs.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="ListaCanciones.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="ListaCanciones.java">
+      <DependentUpon>GeneracionClases.tt</DependentUpon>
+    </Content>
+    <Content Include="ListaCancionesAlta.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="ListaCancionesListado.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
     <Content Include="MDFSJPGVSProyectoIPSReport.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,6 +135,51 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MDFSJPGVSProyectoIPSReportVB.tt</DependentUpon>
+    </Content>
+    <Content Include="PlanEnriquecido.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="PlanEnriquecidoAlta.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="PlanEnriquecidoListado.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="Premium.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="Premium.java">
+      <DependentUpon>GeneracionClases.tt</DependentUpon>
+    </Content>
+    <Content Include="PremiumAlta.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="PremiumListado.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="Standard.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="Standard.java">
+      <DependentUpon>GeneracionClases.tt</DependentUpon>
+    </Content>
+    <Content Include="StandardAlta.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="StandardListado.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="Usuario.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="Usuario.java">
+      <DependentUpon>GeneracionClases.tt</DependentUpon>
+    </Content>
+    <Content Include="UsuarioAlta.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="UsuarioListado.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -197,13 +197,13 @@
     <value>Tipo Letra</value>
     <comment>DisplayName for DomainProperty &apos;TipoLetra&apos; on DomainClass &apos;EstiloOperacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion/TipoColor.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion.Tipo Color</value>
-    <comment>Description for DomainProperty &apos;TipoColor&apos; on DomainClass &apos;EstiloOperacion&apos;</comment>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion/ColorLetra.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion.Color Letra</value>
+    <comment>Description for DomainProperty &apos;ColorLetra&apos; on DomainClass &apos;EstiloOperacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion/TipoColor.DisplayName" xml:space="preserve">
-    <value>Tipo Color</value>
-    <comment>DisplayName for DomainProperty &apos;TipoColor&apos; on DomainClass &apos;EstiloOperacion&apos;</comment>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion/ColorLetra.DisplayName" xml:space="preserve">
+    <value>Color Letra</value>
+    <comment>DisplayName for DomainProperty &apos;ColorLetra&apos; on DomainClass &apos;EstiloOperacion&apos;</comment>
   </data>
   <data name="UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion/EstiloOpCompleto.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion.Estilo Op Completo</value>
@@ -749,54 +749,6 @@
     <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoLetraEnum.Italic</value>
     <comment>Description for EnumerationLiteral &apos;Italic&apos; on DomainEnumeration &apos;TipoLetraEnum&apos;</comment>
   </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum/Azul.DisplayName" xml:space="preserve">
-    <value>Azul</value>
-    <comment>Display name for EnumerationLiteral &apos;Azul&apos; on DomainEnumeration &apos;TipoColorEnum&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum/Azul.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum.Azul</value>
-    <comment>Description for EnumerationLiteral &apos;Azul&apos; on DomainEnumeration &apos;TipoColorEnum&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum/Rojo.DisplayName" xml:space="preserve">
-    <value>Rojo</value>
-    <comment>Display name for EnumerationLiteral &apos;Rojo&apos; on DomainEnumeration &apos;TipoColorEnum&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum/Rojo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum.Rojo</value>
-    <comment>Description for EnumerationLiteral &apos;Rojo&apos; on DomainEnumeration &apos;TipoColorEnum&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum/Negro.DisplayName" xml:space="preserve">
-    <value>Negro</value>
-    <comment>Display name for EnumerationLiteral &apos;Negro&apos; on DomainEnumeration &apos;TipoColorEnum&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum/Negro.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum.Negro</value>
-    <comment>Description for EnumerationLiteral &apos;Negro&apos; on DomainEnumeration &apos;TipoColorEnum&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum/Morado.DisplayName" xml:space="preserve">
-    <value>Morado</value>
-    <comment>Display name for EnumerationLiteral &apos;Morado&apos; on DomainEnumeration &apos;ColorFondoEnum&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum/Morado.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum.Morado</value>
-    <comment>Description for EnumerationLiteral &apos;Morado&apos; on DomainEnumeration &apos;ColorFondoEnum&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum/Amarillo.DisplayName" xml:space="preserve">
-    <value>Amarillo</value>
-    <comment>Display name for EnumerationLiteral &apos;Amarillo&apos; on DomainEnumeration &apos;ColorFondoEnum&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum/Amarillo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum.Amarillo</value>
-    <comment>Description for EnumerationLiteral &apos;Amarillo&apos; on DomainEnumeration &apos;ColorFondoEnum&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum/Celeste.DisplayName" xml:space="preserve">
-    <value>Celeste</value>
-    <comment>Display name for EnumerationLiteral &apos;Celeste&apos; on DomainEnumeration &apos;ColorFondoEnum&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum/Celeste.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum.Celeste</value>
-    <comment>Description for EnumerationLiteral &apos;Celeste&apos; on DomainEnumeration &apos;ColorFondoEnum&apos;</comment>
-  </data>
   <data name="UPM_IPS.MDFSJPGVSProyectoIPS.FormatoEnum/TextoNormal.DisplayName" xml:space="preserve">
     <value>TextoNormal</value>
     <comment>Display name for EnumerationLiteral &apos;TextoNormal&apos; on DomainEnumeration &apos;FormatoEnum&apos;</comment>
@@ -932,6 +884,46 @@
   <data name="UPM_IPS.MDFSJPGVSProyectoIPS.TipoPrivatePublicProtected/Protected.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoPrivatePublicProtected.Protected</value>
     <comment>Description for EnumerationLiteral &apos;Protected&apos; on DomainEnumeration &apos;TipoPrivatePublicProtected&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum/I.DisplayName" xml:space="preserve">
+    <value>I</value>
+    <comment>Display name for EnumerationLiteral &apos;I&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum/I.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum.I</value>
+    <comment>Description for EnumerationLiteral &apos;I&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum/N.DisplayName" xml:space="preserve">
+    <value>N</value>
+    <comment>Display name for EnumerationLiteral &apos;N&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum/N.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum.N</value>
+    <comment>Description for EnumerationLiteral &apos;N&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum/center.DisplayName" xml:space="preserve">
+    <value>center</value>
+    <comment>Display name for EnumerationLiteral &apos;center&apos; on DomainEnumeration &apos;AlineacionEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum/center.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum.center</value>
+    <comment>Description for EnumerationLiteral &apos;center&apos; on DomainEnumeration &apos;AlineacionEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum/left.DisplayName" xml:space="preserve">
+    <value>left</value>
+    <comment>Display name for EnumerationLiteral &apos;left&apos; on DomainEnumeration &apos;AlineacionEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum/left.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum.left</value>
+    <comment>Description for EnumerationLiteral &apos;left&apos; on DomainEnumeration &apos;AlineacionEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum/right.DisplayName" xml:space="preserve">
+    <value>right</value>
+    <comment>Display name for EnumerationLiteral &apos;right&apos; on DomainEnumeration &apos;AlineacionEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum/right.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum.right</value>
+    <comment>Description for EnumerationLiteral &apos;right&apos; on DomainEnumeration &apos;AlineacionEnum&apos;</comment>
   </data>
   <data name="UPM_IPS.MDFSJPGVSProyectoIPS.MetaforaClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MDFSJPGVSProyectoIPS.MetaforaClase</value>

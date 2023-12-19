@@ -1085,59 +1085,59 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		}
 		
 		#endregion
-		#region TipoColor domain property code
+		#region ColorLetra domain property code
 		
 		/// <summary>
-		/// TipoColor domain property Id.
+		/// ColorLetra domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid TipoColorDomainPropertyId = new global::System.Guid(0xc0b075ff, 0x4ecf, 0x4b08, 0x8d, 0xa6, 0xf3, 0x7b, 0xaf, 0x64, 0x04, 0x98);
+		public static readonly global::System.Guid ColorLetraDomainPropertyId = new global::System.Guid(0xc0b075ff, 0x4ecf, 0x4b08, 0x8d, 0xa6, 0xf3, 0x7b, 0xaf, 0x64, 0x04, 0x98);
 		
 		/// <summary>
-		/// Storage for TipoColor
+		/// Storage for ColorLetra
 		/// </summary>
-		private TipoColorEnum tipoColorPropertyStorage;
+		private global::System.String colorLetraPropertyStorage = string.Empty;
 		
 		/// <summary>
-		/// Gets or sets the value of TipoColor domain property.
-		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion.Tipo Color
+		/// Gets or sets the value of ColorLetra domain property.
+		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion.Color Letra
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion/TipoColor.DisplayName", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion/TipoColor.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion/ColorLetra.DisplayName", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion/ColorLetra.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("c0b075ff-4ecf-4b08-8da6-f37baf640498")]
-		public TipoColorEnum TipoColor
+		public global::System.String ColorLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return tipoColorPropertyStorage;
+				return colorLetraPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				TipoColorPropertyHandler.Instance.SetValue(this, value);
+				ColorLetraPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the EstiloOperacion.TipoColor domain property.
+		/// Value handler for the EstiloOperacion.ColorLetra domain property.
 		/// </summary>
-		internal sealed partial class TipoColorPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloOperacion, TipoColorEnum>
+		internal sealed partial class ColorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloOperacion, global::System.String>
 		{
-			private TipoColorPropertyHandler() { }
+			private ColorLetraPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the EstiloOperacion.TipoColor domain property value handler.
+			/// Gets the singleton instance of the EstiloOperacion.ColorLetra domain property value handler.
 			/// </summary>
-			public static readonly TipoColorPropertyHandler Instance = new TipoColorPropertyHandler();
+			public static readonly ColorLetraPropertyHandler Instance = new ColorLetraPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the EstiloOperacion.TipoColor domain property.
+			/// Gets the Id of the EstiloOperacion.ColorLetra domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return TipoColorDomainPropertyId;
+					return ColorLetraDomainPropertyId;
 				}
 			}
 			
@@ -1146,10 +1146,10 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed TipoColorEnum GetValue(EstiloOperacion element)
+			public override sealed global::System.String GetValue(EstiloOperacion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.tipoColorPropertyStorage;
+				return element.colorLetraPropertyStorage;
 			}
 		
 			/// <summary>
@@ -1157,15 +1157,15 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloOperacion element, TipoColorEnum newValue)
+			public override sealed void SetValue(EstiloOperacion element, global::System.String newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				TipoColorEnum oldValue = GetValue(element);
+				global::System.String oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.tipoColorPropertyStorage = newValue;
+					element.colorLetraPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -1309,7 +1309,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		/// <summary>
 		/// Storage for Alineacion
 		/// </summary>
-		private global::System.String alineacionPropertyStorage = string.Empty;
+		private AlineacionEnum alineacionPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of Alineacion domain property.
@@ -1318,7 +1318,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.MDFSJPGVSProyectoIPS.EstiloClase/Alineacion.DisplayName", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.EstiloClase/Alineacion.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("8e72df23-b269-4fc0-ba27-bac78454ce51")]
-		public global::System.String Alineacion
+		public AlineacionEnum Alineacion
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1334,7 +1334,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		/// <summary>
 		/// Value handler for the EstiloClase.Alineacion domain property.
 		/// </summary>
-		internal sealed partial class AlineacionPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, global::System.String>
+		internal sealed partial class AlineacionPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, AlineacionEnum>
 		{
 			private AlineacionPropertyHandler() { }
 		
@@ -1360,7 +1360,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloClase element)
+			public override sealed AlineacionEnum GetValue(EstiloClase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.alineacionPropertyStorage;
@@ -1371,11 +1371,11 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloClase element, global::System.String newValue)
+			public override sealed void SetValue(EstiloClase element, AlineacionEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				AlineacionEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1396,7 +1396,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		/// <summary>
 		/// Storage for ColorFondo
 		/// </summary>
-		private ColorFondoEnum colorFondoPropertyStorage;
+		private global::System.String colorFondoPropertyStorage = string.Empty;
 		
 		/// <summary>
 		/// Gets or sets the value of ColorFondo domain property.
@@ -1405,7 +1405,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.MDFSJPGVSProyectoIPS.EstiloClase/ColorFondo.DisplayName", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.EstiloClase/ColorFondo.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("e97a2eb7-4e46-4df4-93f3-0d2f43ed0afe")]
-		public ColorFondoEnum ColorFondo
+		public global::System.String ColorFondo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1421,7 +1421,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		/// <summary>
 		/// Value handler for the EstiloClase.ColorFondo domain property.
 		/// </summary>
-		internal sealed partial class ColorFondoPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, ColorFondoEnum>
+		internal sealed partial class ColorFondoPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, global::System.String>
 		{
 			private ColorFondoPropertyHandler() { }
 		
@@ -1447,7 +1447,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed ColorFondoEnum GetValue(EstiloClase element)
+			public override sealed global::System.String GetValue(EstiloClase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorFondoPropertyStorage;
@@ -1458,11 +1458,11 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloClase element, ColorFondoEnum newValue)
+			public override sealed void SetValue(EstiloClase element, global::System.String newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				ColorFondoEnum oldValue = GetValue(element);
+				global::System.String oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

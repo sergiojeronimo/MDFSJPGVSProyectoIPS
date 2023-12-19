@@ -134,8 +134,8 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <!-- Property: Nombre -->
-        <xsd:attribute name="nombre" type="xsd:string" />
+        <!-- Property: NombreClase -->
+        <xsd:attribute name="nombreClase" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -214,8 +214,8 @@
         </xsd:attribute>
         <!-- Property: TipoLetra -->
         <xsd:attribute name="tipoLetra" type="TipoLetraEnum" />
-        <!-- Property: TipoColor -->
-        <xsd:attribute name="tipoColor" type="TipoColorEnum" />
+        <!-- Property: ColorLetra -->
+        <xsd:attribute name="colorLetra" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -249,9 +249,9 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: Alineacion -->
-        <xsd:attribute name="alineacion" type="xsd:string" />
+        <xsd:attribute name="alineacion" type="AlineacionEnum" />
         <!-- Property: ColorFondo -->
-        <xsd:attribute name="colorFondo" type="ColorFondoEnum" />
+        <xsd:attribute name="colorFondo" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -612,9 +612,9 @@
         <!-- Property: Nombre -->
         <xsd:attribute name="nombre" type="xsd:string" />
         <!-- Property: CardinalidadFin -->
-        <xsd:attribute name="cardinalidadFin" type="xsd:string" />
+        <xsd:attribute name="cardinalidadFin" type="CardinalidadesEnum" />
         <!-- Property: CardinalidadInit -->
-        <xsd:attribute name="cardinalidadInit" type="xsd:string" />
+        <xsd:attribute name="cardinalidadInit" type="CardinalidadesEnum" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -783,24 +783,6 @@
     </xsd:restriction>
   </xsd:simpleType>
   
-  <!-- Enum TipoColorEnum -->
-  <xsd:simpleType name="TipoColorEnum">
-    <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="Azul"/>
-      <xsd:enumeration value="Rojo"/>
-      <xsd:enumeration value="Negro"/>
-    </xsd:restriction>
-  </xsd:simpleType>
-  
-  <!-- Enum ColorFondoEnum -->
-  <xsd:simpleType name="ColorFondoEnum">
-    <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="Morado"/>
-      <xsd:enumeration value="Amarillo"/>
-      <xsd:enumeration value="Celeste"/>
-    </xsd:restriction>
-  </xsd:simpleType>
-  
   <!-- Enum FormatoEnum -->
   <xsd:simpleType name="FormatoEnum">
     <xsd:restriction base="xsd:string">
@@ -851,6 +833,23 @@
       <xsd:enumeration value="Public"/>
       <xsd:enumeration value="Private"/>
       <xsd:enumeration value="Protected"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum CardinalidadesEnum -->
+  <xsd:simpleType name="CardinalidadesEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="I"/>
+      <xsd:enumeration value="N"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum AlineacionEnum -->
+  <xsd:simpleType name="AlineacionEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="center"/>
+      <xsd:enumeration value="left"/>
+      <xsd:enumeration value="right"/>
     </xsd:restriction>
   </xsd:simpleType>
   

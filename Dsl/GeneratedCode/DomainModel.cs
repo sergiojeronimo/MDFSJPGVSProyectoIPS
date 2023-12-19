@@ -117,7 +117,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 				new DomainMemberInfo(typeof(Clase), "NombreCompleto", Clase.NombreCompletoDomainPropertyId, typeof(Clase.NombreCompletoPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseEnriquecida), "NombreCompletoE", ClaseEnriquecida.NombreCompletoEDomainPropertyId, typeof(ClaseEnriquecida.NombreCompletoEPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloOperacion), "TipoLetra", EstiloOperacion.TipoLetraDomainPropertyId, typeof(EstiloOperacion.TipoLetraPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloOperacion), "TipoColor", EstiloOperacion.TipoColorDomainPropertyId, typeof(EstiloOperacion.TipoColorPropertyHandler)),
+				new DomainMemberInfo(typeof(EstiloOperacion), "ColorLetra", EstiloOperacion.ColorLetraDomainPropertyId, typeof(EstiloOperacion.ColorLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloOperacion), "EstiloOpCompleto", EstiloOperacion.EstiloOpCompletoDomainPropertyId, typeof(EstiloOperacion.EstiloOpCompletoPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloClase), "Alineacion", EstiloClase.AlineacionDomainPropertyId, typeof(EstiloClase.AlineacionPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloClase), "ColorFondo", EstiloClase.ColorFondoDomainPropertyId, typeof(EstiloClase.ColorFondoPropertyHandler)),
@@ -585,64 +585,6 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 namespace UPM_IPS.MDFSJPGVSProyectoIPS
 {
 	/// <summary>
-	/// DomainEnumeration: TipoColorEnum
-	/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum
-	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public enum TipoColorEnum
-	{
-		/// <summary>
-		/// Azul
-		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum.Azul
-		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum/Azul.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
-		Azul = 0,
-		/// <summary>
-		/// Rojo
-		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum.Rojo
-		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum/Rojo.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
-		Rojo = 1,
-		/// <summary>
-		/// Negro
-		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum.Negro
-		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum/Negro.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
-		Negro = 2,
-	}
-}
-namespace UPM_IPS.MDFSJPGVSProyectoIPS
-{
-	/// <summary>
-	/// DomainEnumeration: ColorFondoEnum
-	/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum
-	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public enum ColorFondoEnum
-	{
-		/// <summary>
-		/// Morado
-		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum.Morado
-		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum/Morado.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
-		Morado = 0,
-		/// <summary>
-		/// Amarillo
-		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum.Amarillo
-		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum/Amarillo.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
-		Amarillo = 1,
-		/// <summary>
-		/// Celeste
-		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum.Celeste
-		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum/Celeste.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
-		Celeste = 2,
-	}
-}
-namespace UPM_IPS.MDFSJPGVSProyectoIPS
-{
-	/// <summary>
 	/// DomainEnumeration: FormatoEnum
 	/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.FormatoEnum
 	/// </summary>
@@ -808,6 +750,58 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.TipoPrivatePublicProtected/Protected.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 		Protected = 2,
+	}
+}
+namespace UPM_IPS.MDFSJPGVSProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: CardinalidadesEnum
+	/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum CardinalidadesEnum
+	{
+		/// <summary>
+		/// I
+		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum.I
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum/I.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
+		I = 0,
+		/// <summary>
+		/// N
+		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum.N
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum/N.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
+		N = 1,
+	}
+}
+namespace UPM_IPS.MDFSJPGVSProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: AlineacionEnum
+	/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum AlineacionEnum
+	{
+		/// <summary>
+		/// center
+		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum.center
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum/center.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
+		center = 0,
+		/// <summary>
+		/// left
+		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum.left
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum/left.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
+		left = 1,
+		/// <summary>
+		/// right
+		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum.right
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum/right.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
+		right = 2,
 	}
 }
 

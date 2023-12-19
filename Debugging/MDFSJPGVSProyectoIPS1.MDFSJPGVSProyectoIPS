@@ -2,27 +2,30 @@
 <tapizDiagramaClases xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="63b6ed34-e631-4654-867e-ec188fa33b32" xmlns="http://schemas.microsoft.com/dsltools/MDFSJPGVSProyectoIPS">
   <clases>
     <tapizDiagramaClasesHasClases Id="3127f4ea-f2e0-4f20-9e61-925534e1ba95">
-      <clase Id="97c926b0-2462-42f4-b2c8-e7dab84e93ab" nombre="Usuario">
+      <clase Id="97c926b0-2462-42f4-b2c8-e7dab84e93ab" nombreClase="Usuario">
         <atributo>
           <claseHasAtributo Id="a9ebd355-70f8-4b0e-a276-5ff61bd0e064">
             <atributo Id="1934366d-1c8d-4945-bc7b-29dfada9c284" nombre="id" tipoDato="Int" tipoPrivatePublicProtected="Private" />
           </claseHasAtributo>
           <claseHasAtributo Id="dd1a826e-3a83-4bd2-ae0e-8df4cc86ef17">
-            <atributo Id="5f1ddd48-03da-43bb-a2ef-0c47a74a645f" nombre="Nombre" tipoDato="String" tipoPrivatePublicProtected="Private" />
+            <atributo Id="5f1ddd48-03da-43bb-a2ef-0c47a74a645f" nombre="nombre" tipoDato="String" tipoPrivatePublicProtected="Private" />
           </claseHasAtributo>
           <claseHasAtributo Id="1485846f-4547-4068-b484-fa8aefd7c663">
             <atributo Id="b0808ad8-ae98-4653-bb73-c0e040992bdb" nombre="correo" tipoDato="String" tipoPrivatePublicProtected="Private" />
           </claseHasAtributo>
+          <claseHasAtributo Id="b35823ca-48e3-475a-a63c-ab40f7b4777b">
+            <atributo Id="b7ade652-6e76-448d-aba5-00511acfabc5" nombre="contrasenia" tipoDato="String" tipoPrivatePublicProtected="Private" />
+          </claseHasAtributo>
         </atributo>
         <claseAsociante>
-          <asociacion Id="bd29c6b8-bbbf-4a5e-9c30-b67cf8825af0" nombre="escucha" cardinalidadFin="0..*" cardinalidadInit="0..*">
+          <asociacion Id="bd29c6b8-bbbf-4a5e-9c30-b67cf8825af0" nombre="escucha" cardinalidadFin="N" cardinalidadInit="N">
             <claseMoniker Id="9899c018-8347-4c55-b470-08919b5b79ec" />
           </asociacion>
         </claseAsociante>
       </clase>
     </tapizDiagramaClasesHasClases>
     <tapizDiagramaClasesHasClases Id="8714aa2e-dbf3-4437-b581-fd3193a4907e">
-      <clase Id="24056ce2-e81e-43fa-864d-14b718cde18d" nombre="Standard">
+      <clase Id="24056ce2-e81e-43fa-864d-14b718cde18d" nombreClase="Standard">
         <clasePadre>
           <herencia Id="bf074e6b-6cff-4756-82b0-c88530955d33" tipoHerencia="Total" tipoHijos="Disjunta">
             <claseMoniker Id="97c926b0-2462-42f4-b2c8-e7dab84e93ab" />
@@ -31,9 +34,9 @@
       </clase>
     </tapizDiagramaClasesHasClases>
     <tapizDiagramaClasesHasClases Id="88bd9bae-12bd-46c8-9930-8ffe3cdf6455">
-      <clase Id="215684dd-39de-4400-bcee-50788dade15c" nombre="Premium">
+      <clase Id="215684dd-39de-4400-bcee-50788dade15c" nombreClase="Premium">
         <claseAsociante>
-          <asociacion Id="3ddf95fe-a5fd-4eea-a2ea-8b81e6a581ca" nombre="paga" cardinalidadFin="1..1" cardinalidadInit="0..*">
+          <asociacion Id="3ddf95fe-a5fd-4eea-a2ea-8b81e6a581ca" nombre="paga" cardinalidadFin="I" cardinalidadInit="N">
             <claseEnriquecidaMoniker Id="e7836dfe-e5fa-4f2c-9545-4f3d02dfb25f" />
           </asociacion>
         </claseAsociante>
@@ -45,7 +48,7 @@
       </clase>
     </tapizDiagramaClasesHasClases>
     <tapizDiagramaClasesHasClases Id="e7261661-fde4-4c9e-a5d4-b6cf389f79d3">
-      <claseEnriquecida Id="fcabb5ff-b448-4f0a-a6ad-0d2e144de5dc" nombre="Anuncio">
+      <claseEnriquecida Id="fcabb5ff-b448-4f0a-a6ad-0d2e144de5dc" nombreClase="Anuncio">
         <atributo>
           <claseHasAtributo Id="cba37994-b46d-4ddf-b996-60b797e07688">
             <atributo Id="111db0cd-ed83-4cff-a1b3-efee66fcf26f" nombre="anunciante" tipoDato="String" tipoPrivatePublicProtected="Private" />
@@ -55,25 +58,25 @@
           </claseHasAtributo>
         </atributo>
         <claseAsociante>
-          <asociacion Id="bae18e2c-9fef-4aff-b69a-33f026a65168" nombre="recibe" cardinalidadFin="0,,*" cardinalidadInit="0,,*">
+          <asociacion Id="bae18e2c-9fef-4aff-b69a-33f026a65168" nombre="recibe" cardinalidadFin="N" cardinalidadInit="N">
             <claseMoniker Id="24056ce2-e81e-43fa-864d-14b718cde18d" />
           </asociacion>
         </claseAsociante>
         <estiloOperacioned>
           <claseEnriquecidaHasEstiloOperacioned Id="e46d9ec1-346f-415c-a31d-c3b04e5bb424">
-            <estiloClase Id="c9c3b8fd-a55b-41ae-9804-db73a434920f" tipoLetra="Arial" tipoColor="Azul" alineacion="Central" colorFondo="Morado" />
+            <estiloClase Id="c9c3b8fd-a55b-41ae-9804-db73a434920f" tipoLetra="Arial" colorLetra="0003b0" alineacion="center" colorFondo="0023b0" />
           </claseEnriquecidaHasEstiloOperacioned>
           <claseEnriquecidaHasEstiloOperacioned Id="767fb246-c370-4e8b-ade6-bb0c2c4b02c1">
-            <estiloAtributo Id="e2808ce5-13dc-4d99-a7f9-837ff1b9f329" tipoLetra="Arial" tipoColor="Azul" formato="Radiobutton" />
+            <estiloAtributo Id="e2808ce5-13dc-4d99-a7f9-837ff1b9f329" tipoLetra="Arial" formato="Radiobutton" />
           </claseEnriquecidaHasEstiloOperacioned>
           <claseEnriquecidaHasEstiloOperacioned Id="56fca7cc-0f87-4406-a3e4-cd57c3bf874e">
-            <estiloOperacion Id="338e6f28-4389-4934-afbf-1f34722a6d9e" tipoLetra="Arial" tipoColor="Azul" />
+            <estiloOperacion Id="338e6f28-4389-4934-afbf-1f34722a6d9e" tipoLetra="Arial" colorLetra="0023b0" />
           </claseEnriquecidaHasEstiloOperacioned>
         </estiloOperacioned>
       </claseEnriquecida>
     </tapizDiagramaClasesHasClases>
     <tapizDiagramaClasesHasClases Id="59892975-2762-4e58-8301-6fc81efa3a20">
-      <clase Id="5287e611-5c30-4f86-8e57-2bcf77810e61" nombre="ListaCanciones">
+      <clase Id="5287e611-5c30-4f86-8e57-2bcf77810e61" nombreClase="ListaCanciones">
         <atributo>
           <claseHasAtributo Id="d54bee7c-7828-4bad-8db7-093a8c44c714">
             <atributo Id="777feb09-073f-4256-a249-d0fb29fdc477" nombre="nombre" tipoDato="String" tipoPrivatePublicProtected="Private" />
@@ -83,14 +86,14 @@
           </claseHasAtributo>
         </atributo>
         <claseAsociante>
-          <agregacionFuerte Id="627ee51e-c018-4ec5-97ba-841ec8c4c098" nombre="posee" cardinalidadFin="1" cardinalidadInit="0..*">
+          <agregacionFuerte Id="627ee51e-c018-4ec5-97ba-841ec8c4c098" nombre="posee" cardinalidadFin="I" cardinalidadInit="N">
             <claseMoniker Id="97c926b0-2462-42f4-b2c8-e7dab84e93ab" />
           </agregacionFuerte>
         </claseAsociante>
       </clase>
     </tapizDiagramaClasesHasClases>
     <tapizDiagramaClasesHasClases Id="62315c1b-b3fe-45f2-8c6c-27b63e74c7c3">
-      <clase Id="9899c018-8347-4c55-b470-08919b5b79ec" nombre="Cancion">
+      <clase Id="9899c018-8347-4c55-b470-08919b5b79ec" nombreClase="Cancion">
         <atributo>
           <claseHasAtributo Id="a2d39983-a4c1-475f-9979-cc627413086d">
             <atributo Id="a2743dea-4353-430f-8f68-431e62a57ac9" nombre="titulo" tipoDato="String" tipoPrivatePublicProtected="Private" />
@@ -101,24 +104,24 @@
         </atributo>
         <operaciones>
           <claseHasOperaciones Id="8a29a10b-42b1-448e-8ad6-15ccfec770c9">
-            <operacion Id="239a8309-1a00-4eee-b0c5-33caade53d8a" nombre="repetirCancion()" tipoPrivatePublicProtected="Public" tipoDato="Boolean">
+            <operacion Id="239a8309-1a00-4eee-b0c5-33caade53d8a" nombre="repetirCancion" tipoPrivatePublicProtected="Public" tipoDato="Boolean">
               <parametros>
                 <operacionHasParametros Id="71fa32b3-027a-4440-940e-5c053d48e65e">
-                  <parametro Id="4a2c63e8-43a2-4d86-a365-aaec32836f38" tipoEntradaSalida="Entrada" nombre="Int id" tipoDatoParametro="Int" />
+                  <parametro Id="4a2c63e8-43a2-4d86-a365-aaec32836f38" tipoEntradaSalida="Entrada" nombre="id" tipoDatoParametro="Int" />
                 </operacionHasParametros>
               </parametros>
             </operacion>
           </claseHasOperaciones>
         </operaciones>
         <claseAsociante>
-          <agregacionDebil Id="09b8f7bd-efb7-45a2-8b33-788d68aa4a69" nombre="compuesta" cardinalidadFin="0..*" cardinalidadInit="1..*">
+          <agregacionDebil Id="09b8f7bd-efb7-45a2-8b33-788d68aa4a69" nombre="compuesta" cardinalidadFin="N" cardinalidadInit="N">
             <claseMoniker Id="5287e611-5c30-4f86-8e57-2bcf77810e61" />
           </agregacionDebil>
         </claseAsociante>
       </clase>
     </tapizDiagramaClasesHasClases>
     <tapizDiagramaClasesHasClases Id="90d453d3-dcfc-40a3-bb2a-3658700d7aa8">
-      <claseEnriquecida Id="e7836dfe-e5fa-4f2c-9545-4f3d02dfb25f" nombre="Cuota">
+      <claseEnriquecida Id="e7836dfe-e5fa-4f2c-9545-4f3d02dfb25f" nombreClase="Plan">
         <atributo>
           <claseHasAtributo Id="2e495527-14e5-4616-bb9b-102d5d95e12a">
             <atributo Id="eb45d830-6261-4917-bc10-41c5dd137815" nombre="importe" tipoDato="Float" tipoPrivatePublicProtected="Private" />
@@ -129,7 +132,7 @@
         </atributo>
         <estiloOperacioned>
           <claseEnriquecidaHasEstiloOperacioned Id="8cb4cb31-eac9-4a9f-a30b-da864d32f20c">
-            <estiloClase Id="850bb886-0710-4648-a2cc-64dc90afd61f" tipoLetra="Italic" tipoColor="Rojo" alineacion="Izquierda" colorFondo="Amarillo" />
+            <estiloClase Id="850bb886-0710-4648-a2cc-64dc90afd61f" tipoLetra="Italic" colorLetra="0003b0" alineacion="center" colorFondo="0021b9" />
           </claseEnriquecidaHasEstiloOperacioned>
         </estiloOperacioned>
       </claseEnriquecida>

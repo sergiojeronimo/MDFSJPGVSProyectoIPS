@@ -81,9 +81,9 @@
             <DomainEnumerationMoniker Name="TipoLetraEnum" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="c0b075ff-4ecf-4b08-8da6-f37baf640498" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion.Tipo Color" Name="TipoColor" DisplayName="Tipo Color">
+        <DomainProperty Id="c0b075ff-4ecf-4b08-8da6-f37baf640498" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion.Color Letra" Name="ColorLetra" DisplayName="Color Letra">
           <Type>
-            <DomainEnumerationMoniker Name="TipoColorEnum" />
+            <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="0a2c502b-c687-42bf-8664-107995769c7c" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.EstiloOperacion.Estilo Op Completo" Name="EstiloOpCompleto" DisplayName="Estilo Op Completo" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
@@ -100,12 +100,12 @@
       <Properties>
         <DomainProperty Id="8e72df23-b269-4fc0-ba27-bac78454ce51" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.EstiloClase.Alineacion" Name="Alineacion" DisplayName="Alineacion">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="AlineacionEnum" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="e97a2eb7-4e46-4df4-93f3-0d2f43ed0afe" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.EstiloClase.Color Fondo" Name="ColorFondo" DisplayName="Color Fondo">
           <Type>
-            <DomainEnumerationMoniker Name="ColorFondoEnum" />
+            <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="34cb10d1-4745-4fab-b4c7-cbb6e395fd05" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.EstiloClase.Estilo Cl Completo" Name="EstiloClCompleto" DisplayName="Estilo Cl Completo" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
@@ -294,12 +294,12 @@
         </DomainProperty>
         <DomainProperty Id="59d244de-9574-45c0-b4ce-402cb6cd2a9f" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.Asociacion.Cardinalidad Fin" Name="CardinalidadFin" DisplayName="Cardinalidad Fin">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="CardinalidadesEnum" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="7ea4d277-7c78-4da5-a3ba-8f750279210d" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.Asociacion.Cardinalidad Init" Name="CardinalidadInit" DisplayName="Cardinalidad Init">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="CardinalidadesEnum" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -424,20 +424,6 @@
         <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoLetraEnum.Italic" Name="Italic" Value="1" />
       </Literals>
     </DomainEnumeration>
-    <DomainEnumeration Name="TipoColorEnum" Namespace="UPM_IPS.MDFSJPGVSProyectoIPS" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum">
-      <Literals>
-        <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum.Azul" Name="Azul" Value="0" />
-        <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum.Rojo" Name="Rojo" Value="1" />
-        <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoColorEnum.Negro" Name="Negro" Value="2" />
-      </Literals>
-    </DomainEnumeration>
-    <DomainEnumeration Name="ColorFondoEnum" Namespace="UPM_IPS.MDFSJPGVSProyectoIPS" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum">
-      <Literals>
-        <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum.Morado" Name="Morado" Value="0" />
-        <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum.Amarillo" Name="Amarillo" Value="1" />
-        <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.ColorFondoEnum.Celeste" Name="Celeste" Value="2" />
-      </Literals>
-    </DomainEnumeration>
     <DomainEnumeration Name="FormatoEnum" Namespace="UPM_IPS.MDFSJPGVSProyectoIPS" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.FormatoEnum">
       <Literals>
         <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.FormatoEnum.TextoNormal" Name="TextoNormal" Value="0" />
@@ -477,6 +463,19 @@
         <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoPrivatePublicProtected.Public" Name="Public" Value="0" />
         <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoPrivatePublicProtected.Private" Name="Private" Value="1" />
         <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.TipoPrivatePublicProtected.Protected" Name="Protected" Value="2" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="CardinalidadesEnum" Namespace="UPM_IPS.MDFSJPGVSProyectoIPS" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum.I" Name="I" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.CardinalidadesEnum.N" Name="N" Value="1" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="AlineacionEnum" Namespace="UPM_IPS.MDFSJPGVSProyectoIPS" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum.center" Name="center" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum.left" Name="left" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.AlineacionEnum.right" Name="right" Value="2" />
       </Literals>
     </DomainEnumeration>
   </Types>
@@ -636,8 +635,8 @@
           <XmlPropertyData XmlName="tipoLetra">
             <DomainPropertyMoniker Name="EstiloOperacion/TipoLetra" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="tipoColor">
-            <DomainPropertyMoniker Name="EstiloOperacion/TipoColor" />
+          <XmlPropertyData XmlName="colorLetra">
+            <DomainPropertyMoniker Name="EstiloOperacion/ColorLetra" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="estiloOpCompleto" Representation="Ignore">
             <DomainPropertyMoniker Name="EstiloOperacion/EstiloOpCompleto" />

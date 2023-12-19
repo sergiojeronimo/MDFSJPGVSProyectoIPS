@@ -1,0 +1,67 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
+<#@ output extension=".txt" #>
+<#@ MDFSJPGVSProyectoIPS processor="MDFSJPGVSProyectoIPSDirectiveProcessor" requires="fileName='MDFSJPGVSProyectoIPS1.MDFSJPGVSProyectoIPS'" #>
+<#@ include file="EF.utility.CS.ttinclude"#>
+
+<# 
+
+var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+foreach (Clase clase in this.TapizDiagramaClases.Clases) {
+	fileManager.StartNewFile(clase.NombreClase + ".java");
+	if(clase.ClaseHija.Count > 0){
+		WriteLine("public abstract class " + clase.NombreClase + " {");
+	} else {
+		if(clase.ClasePadre.Count > 0){
+			Write("public class " + clase.NombreClase + " extends ");
+			foreach (Clase clasePadre in clase.ClasePadre){
+				if(clasePadre.Equals(clase.ClasePadre[clase.ClasePadre.Count - 1])){
+					Write(clasePadre.NombreClase);
+				} else {
+					Write(clasePadre.NombreClase + ", ");
+				}
+			}
+		} else {
+			WriteLine("public class " + clase.NombreClase + " {");
+		}
+		Write(" {\n");
+	}
+	foreach (Atributo atr in clase.Atributo){
+		String tipoDato = atr.TipoDato.ToString();
+		if(atr.TipoDato != TipoDatoEnum.String) tipoDato = tipoDato.ToLower();
+		WriteLine("\t" + atr.TipoPrivatePublicProtected.ToString().ToLower() + " " + tipoDato + " " + atr.Nombre.ToLower() + ";" );
+	}
+	WriteLine("\n\tpublic " + clase.NombreClase + "() {");
+	WriteLine("\t}\n");
+	foreach (Atributo atr in clase.Atributo){
+		String tipoDato = atr.TipoDato.ToString();
+		if(atr.TipoDato != TipoDatoEnum.String) tipoDato = tipoDato.ToLower();
+		String nombreAtr = char.ToUpper(atr.Nombre.ToLower()[0]) + atr.Nombre.ToLower().Substring(1);
+		WriteLine("\tpublic " + tipoDato + " " + "get" + nombreAtr + "()" + " {" );
+		WriteLine("\t\treturn this." + atr.Nombre.ToLower() + ";");
+		WriteLine("\t}");
+		WriteLine("\tpublic void " + "set" + nombreAtr + "(" + tipoDato + " " + atr.Nombre.ToLower() + ")" + " {" );
+		WriteLine("\t\tthis." + atr.Nombre.ToLower() + " = " + atr.Nombre.ToLower() + ";");
+		WriteLine("\t}");
+	}
+	foreach (Operacion op in clase.Operaciones){
+		String tipoDato = op.TipoDato.ToString();
+		if(op.TipoDato != TipoDatoEnum.String) tipoDato = tipoDato.ToLower();
+		Write("\tpublic " + tipoDato + " " + op.Nombre + "(" );
+		foreach (Parametro pa in op.Parametros){
+			String tipoDatoP = pa.TipoDatoParametro.ToString();
+			if(pa.TipoDatoParametro != TipoDatoEnum.String) tipoDatoP = tipoDatoP.ToLower();
+			if(pa.Equals(op.Parametros[op.Parametros.Count - 1])){
+				Write(tipoDatoP + " " + pa.Nombre + ")");
+			} else {
+				Write(tipoDatoP + " " + pa.Nombre + ", ");
+			}
+		}
+		Write(" {\n");
+		WriteLine("\t\t//TODO");
+		WriteLine("\t}");
+	}
+	WriteLine("}");
+}
+fileManager.Process();
+
+#>

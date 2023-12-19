@@ -1,25 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<mDFSJPGVSProyectoIPSDiagram dslVersion="1.0.0.0" Id="5aaef940-68d3-44be-abfb-f2faeccf2fae" absoluteBounds="0, 0, 19.625, 15.375" name="MDFSJPGVSProyectoIPS1">
+<mDFSJPGVSProyectoIPSDiagram dslVersion="1.0.0.0" Id="5aaef940-68d3-44be-abfb-f2faeccf2fae" absoluteBounds="0, 0, 18.75, 12.375" name="MDFSJPGVSProyectoIPS1">
   <tapizDiagramaClasesMoniker Id="63b6ed34-e631-4654-867e-ec188fa33b32" />
   <nestedChildShapes>
-    <metaforaClase Id="16194ea1-9799-4de7-9895-fc4f8cd5d1ac" absoluteBounds="8.75, 3.875, 2.75, 2">
+    <metaforaClase Id="16194ea1-9799-4de7-9895-fc4f8cd5d1ac" absoluteBounds="8.75, 3.125, 2.25, 2">
       <claseMoniker Id="97c926b0-2462-42f4-b2c8-e7dab84e93ab" />
       <nestedChildShapes>
-        <metaforaAtributo Id="943e34b5-0bdf-4020-a77c-9337a22abda8" absoluteBounds="8.875, 4.375, 2.5, 0.25">
+        <metaforaAtributo Id="943e34b5-0bdf-4020-a77c-9337a22abda8" absoluteBounds="8.875, 3.625, 2, 0.25">
           <atributoMoniker Id="1934366d-1c8d-4945-bc7b-29dfada9c284" />
         </metaforaAtributo>
-        <metaforaAtributo Id="5af4de4e-72b6-440e-9332-6036e303a8b1" absoluteBounds="8.875, 4.75, 2.5, 0.25">
+        <metaforaAtributo Id="5af4de4e-72b6-440e-9332-6036e303a8b1" absoluteBounds="8.875, 4, 2, 0.25">
           <atributoMoniker Id="5f1ddd48-03da-43bb-a2ef-0c47a74a645f" />
         </metaforaAtributo>
-        <metaforaAtributo Id="b279f9cd-468a-4188-b4d8-067fef109b74" absoluteBounds="8.875, 5.125, 2.5, 0.25">
+        <metaforaAtributo Id="b279f9cd-468a-4188-b4d8-067fef109b74" absoluteBounds="8.875, 4.375, 2, 0.25">
           <atributoMoniker Id="b0808ad8-ae98-4653-bb73-c0e040992bdb" />
+        </metaforaAtributo>
+        <metaforaAtributo Id="ec0c1b55-e21f-4e91-8b58-8e003e89f6ab" absoluteBounds="8.875, 4.75, 2, 0.25">
+          <atributoMoniker Id="b7ade652-6e76-448d-aba5-00511acfabc5" />
         </metaforaAtributo>
       </nestedChildShapes>
     </metaforaClase>
-    <metaforaClase Id="57f3504d-ff8b-4c37-9e5f-178bf0647508" absoluteBounds="7.625, 7.125, 3, 1.5">
+    <metaforaClase Id="57f3504d-ff8b-4c37-9e5f-178bf0647508" absoluteBounds="7.625, 6.625, 2.125, 0.375">
       <claseMoniker Id="24056ce2-e81e-43fa-864d-14b718cde18d" />
     </metaforaClase>
-    <metaforaHerencia Id="1cf8c193-17f8-4bfe-a729-5169ddbd8644" edgePoints="[(9.6875 : 7.125); (9.6875 : 5.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaHerencia Id="1cf8c193-17f8-4bfe-a729-5169ddbd8644" edgePoints="[(9.25 : 6.625); (9.25 : 5.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <herenciaMoniker Id="bf074e6b-6cff-4756-82b0-c88530955d33" />
       <relativeChildShapes />
       <nodes>
@@ -27,52 +30,52 @@
         <metaforaClaseMoniker Id="16194ea1-9799-4de7-9895-fc4f8cd5d1ac" />
       </nodes>
     </metaforaHerencia>
-    <metaforaClase Id="7f75d0d5-f71b-4aa9-9d1f-47fed4336083" absoluteBounds="11.375, 8, 3, 1.375">
+    <metaforaClase Id="7f75d0d5-f71b-4aa9-9d1f-47fed4336083" absoluteBounds="10.125, 6.625, 2.125, 0.375">
       <claseMoniker Id="215684dd-39de-4400-bcee-50788dade15c" />
     </metaforaClase>
-    <metaforaClaseEnriquecida Id="587c1ab8-aa78-42df-af91-ff67356c66dd" absoluteBounds="7.5, 10.75, 3.75, 4.375">
+    <metaforaClaseEnriquecida Id="587c1ab8-aa78-42df-af91-ff67356c66dd" absoluteBounds="7.125, 8.125, 2.625, 4">
       <claseEnriquecidaMoniker Id="fcabb5ff-b448-4f0a-a6ad-0d2e144de5dc" />
       <nestedChildShapes>
-        <metaforaAtributo Id="009e7f0e-a7c8-499f-88a4-c67347f0d451" absoluteBounds="7.875, 11.625, 2.5, 0.25">
+        <metaforaAtributo Id="009e7f0e-a7c8-499f-88a4-c67347f0d451" absoluteBounds="7.25, 8.875, 2.375, 0.25">
           <atributoMoniker Id="111db0cd-ed83-4cff-a1b3-efee66fcf26f" />
         </metaforaAtributo>
-        <metaforaEstiloClase Id="ede15061-ddcd-4360-a83e-8a2b97af7b8f" absoluteBounds="7.875, 12.125, 2.375, 1">
+        <metaforaEstiloClase Id="ede15061-ddcd-4360-a83e-8a2b97af7b8f" absoluteBounds="7.25, 9.25, 2.375, 1">
           <estiloClaseMoniker Id="c9c3b8fd-a55b-41ae-9804-db73a434920f" />
         </metaforaEstiloClase>
-        <metaforaEstiloAtributo Id="c4f767b8-b420-4d3a-84b1-3081457e690b" absoluteBounds="7.875, 13.25, 2.5, 0.875">
+        <metaforaEstiloAtributo Id="c4f767b8-b420-4d3a-84b1-3081457e690b" absoluteBounds="7.25, 10.375, 2.375, 0.875">
           <estiloAtributoMoniker Id="e2808ce5-13dc-4d99-a7f9-837ff1b9f329" />
         </metaforaEstiloAtributo>
-        <metaforaEstiloOperacion Id="16b6b8d7-9d6d-4f2d-9bb5-a686cf4bfa8b" absoluteBounds="7.875, 14.25, 2.125, 0.625">
+        <metaforaEstiloOperacion Id="16b6b8d7-9d6d-4f2d-9bb5-a686cf4bfa8b" absoluteBounds="7.25, 11.375, 2.375, 0.625">
           <estiloOperacionMoniker Id="338e6f28-4389-4934-afbf-1f34722a6d9e" />
         </metaforaEstiloOperacion>
-        <metaforaAtributo Id="5f834dd6-a198-4b4a-a6bd-0a7eac6be275" absoluteBounds="7.875, 11.125, 2.5, 0.25">
+        <metaforaAtributo Id="5f834dd6-a198-4b4a-a6bd-0a7eac6be275" absoluteBounds="7.25, 8.5, 2.375, 0.25">
           <atributoMoniker Id="ad5a22f2-b3f4-4145-83ab-dfb21bbd428d" />
         </metaforaAtributo>
       </nestedChildShapes>
     </metaforaClaseEnriquecida>
-    <metaforaAsociacion Id="957fd20b-cc94-419d-b21a-528086991d88" edgePoints="[(9.125 : 10.75); (9.125 : 8.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaAsociacion Id="957fd20b-cc94-419d-b21a-528086991d88" edgePoints="[(8.6875 : 8.125); (8.6875 : 7)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <asociacionMoniker Id="bae18e2c-9fef-4aff-b69a-33f026a65168" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="9.25, 9.375, 0.36472797393798828, 0.16167533397674561" shapeFieldName="NombreAsociacion" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="8.75, 7.375, 0.36472797393798828, 0.16167533397674561" shapeFieldName="NombreAsociacion" />
       </moveableDecoratorHostShapes>
       <nodes>
         <metaforaClaseEnriquecidaMoniker Id="587c1ab8-aa78-42df-af91-ff67356c66dd" />
         <metaforaClaseMoniker Id="57f3504d-ff8b-4c37-9e5f-178bf0647508" />
       </nodes>
     </metaforaAsociacion>
-    <metaforaClase Id="9330ff49-5885-4d2f-8bbe-ed26872a4dab" absoluteBounds="16, 6.75, 3, 1.375">
+    <metaforaClase Id="9330ff49-5885-4d2f-8bbe-ed26872a4dab" absoluteBounds="12.25, 4, 2.5, 1.125">
       <claseMoniker Id="5287e611-5c30-4f86-8e57-2bcf77810e61" />
       <nestedChildShapes>
-        <metaforaAtributo Id="e5c1bd41-27f6-4593-a3dd-80460cdc1952" absoluteBounds="16.25, 7.5, 2.5, 0.25">
+        <metaforaAtributo Id="e5c1bd41-27f6-4593-a3dd-80460cdc1952" absoluteBounds="12.375, 4.75, 2.25, 0.25">
           <atributoMoniker Id="777feb09-073f-4256-a249-d0fb29fdc477" />
         </metaforaAtributo>
-        <metaforaAtributo Id="897a6efa-f6a3-4d55-84ee-f12aa560ae65" absoluteBounds="16.25, 7.125, 2.5, 0.25">
+        <metaforaAtributo Id="897a6efa-f6a3-4d55-84ee-f12aa560ae65" absoluteBounds="12.375, 4.375, 2.25, 0.25">
           <atributoMoniker Id="85ab8c13-6a72-443b-bf0a-9ce993615869" />
         </metaforaAtributo>
       </nestedChildShapes>
     </metaforaClase>
-    <metaforaHerencia Id="e95ff399-14f7-45d9-8c14-c6b1c14c9c63" edgePoints="[(12.9375005 : 8); (12.9375005 : 4.875); (11.5 : 4.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaHerencia Id="e95ff399-14f7-45d9-8c14-c6b1c14c9c63" edgePoints="[(10.5625 : 6.625); (10.5625 : 5.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <herenciaMoniker Id="8be2be2b-a360-4e14-9229-71054a8295b8" />
       <relativeChildShapes />
       <nodes>
@@ -80,77 +83,77 @@
         <metaforaClaseMoniker Id="16194ea1-9799-4de7-9895-fc4f8cd5d1ac" />
       </nodes>
     </metaforaHerencia>
-    <metaforaAgregacionFuerte Id="75942506-e5ea-47fe-bba4-813d3b2ac288" edgePoints="[(16.15625 : 6.75); (16.15625 : 5.65625); (13.0208338333333 : 5.65625 : JumpStart); (12.8541671666667 : 5.65625 : JumpEnd); (11.5 : 5.65625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaAgregacionFuerte Id="75942506-e5ea-47fe-bba4-813d3b2ac288" edgePoints="[(12.25 : 4.5625); (11 : 4.5625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <agregacionFuerteMoniker Id="627ee51e-c018-4ec5-97ba-841ec8c4c098" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallySized="true" manuallyPlaced="true" absoluteBounds="14.1875, 5.3125, 0.35214117169380188, 0.16167533397674561" shapeFieldName="NombreAgregacionFuerte" />
+        <moveableDecoratorHostShape manuallySized="true" manuallyPlaced="true" absoluteBounds="11.3125, 4.3125, 0.35214117169380188, 0.16167533397674561" shapeFieldName="NombreAgregacionFuerte" />
       </moveableDecoratorHostShapes>
       <nodes>
         <metaforaClaseMoniker Id="9330ff49-5885-4d2f-8bbe-ed26872a4dab" />
         <metaforaClaseMoniker Id="16194ea1-9799-4de7-9895-fc4f8cd5d1ac" />
       </nodes>
     </metaforaAgregacionFuerte>
-    <metaforaClase Id="ff7d2459-d9bf-4b7e-862b-b8ff0da3a508" absoluteBounds="16.375, 3, 3, 2.375">
+    <metaforaClase Id="ff7d2459-d9bf-4b7e-862b-b8ff0da3a508" absoluteBounds="16.375, 3, 2.125, 2">
       <claseMoniker Id="9899c018-8347-4c55-b470-08919b5b79ec" />
       <nestedChildShapes>
-        <metaforaAtributo Id="68865630-ed01-409e-aead-58b7d3c9a800" absoluteBounds="16.625, 4, 2.5, 0.25">
+        <metaforaAtributo Id="68865630-ed01-409e-aead-58b7d3c9a800" absoluteBounds="16.5, 3.875, 1.875, 0.25">
           <atributoMoniker Id="a2743dea-4353-430f-8f68-431e62a57ac9" />
         </metaforaAtributo>
-        <metaforaAtributo Id="253b1dda-02bc-4270-9b75-713404bdb207" absoluteBounds="16.625, 3.5, 2.5, 0.25">
+        <metaforaAtributo Id="253b1dda-02bc-4270-9b75-713404bdb207" absoluteBounds="16.5, 3.5, 1.875, 0.25">
           <atributoMoniker Id="926a93ca-734a-4f91-8682-c5754b46e091" />
         </metaforaAtributo>
-        <metaforaOperacion Id="1a1b80b1-29a9-4ca0-9e3f-84ef4db66f30" absoluteBounds="16.625, 4.5, 2.5, 0.75">
+        <metaforaOperacion Id="1a1b80b1-29a9-4ca0-9e3f-84ef4db66f30" absoluteBounds="16.5, 4.25, 1.875, 0.625">
           <operacionMoniker Id="239a8309-1a00-4eee-b0c5-33caade53d8a" />
           <nestedChildShapes>
-            <metaforaParametro Id="e3d58f34-41e2-425a-8792-fb4a3cb9d0fe" absoluteBounds="16.875, 4.75, 2, 0.25">
+            <metaforaParametro Id="e3d58f34-41e2-425a-8792-fb4a3cb9d0fe" absoluteBounds="16.625, 4.5, 1.625, 0.25">
               <parametroMoniker Id="4a2c63e8-43a2-4d86-a365-aaec32836f38" />
             </metaforaParametro>
           </nestedChildShapes>
         </metaforaOperacion>
       </nestedChildShapes>
     </metaforaClase>
-    <metaforaClaseEnriquecida Id="623604f8-ad5e-47a2-812c-9cc2752ac435" absoluteBounds="13.5, 10.5, 3.625, 2.625">
+    <metaforaClaseEnriquecida Id="623604f8-ad5e-47a2-812c-9cc2752ac435" absoluteBounds="10.125, 8.125, 2.625, 2.375">
       <claseEnriquecidaMoniker Id="e7836dfe-e5fa-4f2c-9545-4f3d02dfb25f" />
       <nestedChildShapes>
-        <metaforaAtributo Id="031e62c0-24cf-4263-966e-cca296e719c6" absoluteBounds="13.875, 11.25, 2.5, 0.25">
+        <metaforaAtributo Id="031e62c0-24cf-4263-966e-cca296e719c6" absoluteBounds="10.25, 8.875, 2.375, 0.25">
           <atributoMoniker Id="eb45d830-6261-4917-bc10-41c5dd137815" />
         </metaforaAtributo>
-        <metaforaEstiloClase Id="e2e592d3-bb15-441c-910f-bd48758304b8" absoluteBounds="13.875, 11.625, 2.75, 1.125">
+        <metaforaEstiloClase Id="e2e592d3-bb15-441c-910f-bd48758304b8" absoluteBounds="10.25, 9.25, 2.375, 1.125">
           <estiloClaseMoniker Id="850bb886-0710-4648-a2cc-64dc90afd61f" />
         </metaforaEstiloClase>
-        <metaforaAtributo Id="3adda624-eab0-4034-b0ad-4456c70fcbe9" absoluteBounds="13.875, 10.875, 2.5, 0.25">
+        <metaforaAtributo Id="3adda624-eab0-4034-b0ad-4456c70fcbe9" absoluteBounds="10.25, 8.5, 2.375, 0.25">
           <atributoMoniker Id="81e3f056-e277-470e-96bc-f2cafd81626e" />
         </metaforaAtributo>
       </nestedChildShapes>
     </metaforaClaseEnriquecida>
-    <metaforaAsociacion Id="d82a01b4-7256-4cd7-93fe-79450f3b9b2a" edgePoints="[(13.9375 : 9.375); (13.9375 : 10.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaAsociacion Id="d82a01b4-7256-4cd7-93fe-79450f3b9b2a" edgePoints="[(11.1875 : 7); (11.1875 : 8.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <asociacionMoniker Id="3ddf95fe-a5fd-4eea-a2ea-8b81e6a581ca" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="13.4375, 9.875, 0.30201095342636108, 0.16167533397674561" shapeFieldName="NombreAsociacion" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="11.25, 7.375, 0.30201095342636108, 0.16167533397674561" shapeFieldName="NombreAsociacion" />
       </moveableDecoratorHostShapes>
       <nodes>
         <metaforaClaseMoniker Id="7f75d0d5-f71b-4aa9-9d1f-47fed4336083" />
         <metaforaClaseEnriquecidaMoniker Id="623604f8-ad5e-47a2-812c-9cc2752ac435" />
       </nodes>
     </metaforaAsociacion>
-    <metaforaAgregacionDebil Id="c4817b53-ccb6-4692-83a5-f4452f86472b" edgePoints="[(17.6875 : 5.375); (17.6875 : 6.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaAgregacionDebil Id="c4817b53-ccb6-4692-83a5-f4452f86472b" edgePoints="[(16.375 : 4.50985701906412); (14.75 : 4.50985701906412)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
       <agregacionDebilMoniker Id="09b8f7bd-efb7-45a2-8b33-788d68aa4a69" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="16.9375, 5.8125, 0.66709387302398682, 0.181884765625" shapeFieldName="NombreAgregacionDebil" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="15.25, 4.25, 0.66709387302398682, 0.181884765625" shapeFieldName="NombreAgregacionDebil" />
       </moveableDecoratorHostShapes>
       <nodes>
         <metaforaClaseMoniker Id="ff7d2459-d9bf-4b7e-862b-b8ff0da3a508" />
         <metaforaClaseMoniker Id="9330ff49-5885-4d2f-8bbe-ed26872a4dab" />
       </nodes>
     </metaforaAgregacionDebil>
-    <metaforaAsociacion Id="2e05bf7b-8871-4652-bcda-ed6cee57dc24" edgePoints="[(11.5 : 4.3125); (16.375 : 4.3125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaAsociacion Id="2e05bf7b-8871-4652-bcda-ed6cee57dc24" edgePoints="[(11 : 3.53125); (16.375 : 3.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <asociacionMoniker Id="bd29c6b8-bbbf-4a5e-9c30-b67cf8825af0" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="13.6875, 4, 0.45880350470542908, 0.16167533397674561" shapeFieldName="NombreAsociacion" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="13.5, 3.2944063322368464, 0.45880350470542908, 0.16167533397674561" shapeFieldName="NombreAsociacion" />
       </moveableDecoratorHostShapes>
       <nodes>
         <metaforaClaseMoniker Id="16194ea1-9799-4de7-9895-fc4f8cd5d1ac" />

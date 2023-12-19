@@ -11,7 +11,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
         public string GetEstiloOpCompletoValue()
         {
             String nombre = this.ToString();
-            return string.Format("{0}\n> Tipo de Letra: {1}\n> Color de letra: {1}", nombre.Substring("UPM_IPS.MDFSJPGVSProyectoIPS.".Length),this.TipoLetra, this.TipoColor);
+            return string.Format("{0}\n> Tipo de Letra: {1}\n> Color de letra: #{1}", nombre.Substring("UPM_IPS.MDFSJPGVSProyectoIPS.".Length),this.TipoLetra, this.ColorLetra);
         }
         public void SetEstiloOpCompletoValue(String newValue)
         {
