@@ -1,0 +1,6 @@
+C:\Users\serje\source\repos\MDFSJPGVSProyectoIPS\Debugging\bin\Debug\Debugging.dll
+C:\Users\serje\source\repos\MDFSJPGVSProyectoIPS\Debugging\bin\Debug\Debugging.pdb
+C:\Users\serje\source\repos\MDFSJPGVSProyectoIPS\Debugging\obj\Debug\Debugging.csproj.AssemblyReference.cache
+C:\Users\serje\source\repos\MDFSJPGVSProyectoIPS\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\serje\source\repos\MDFSJPGVSProyectoIPS\Debugging\obj\Debug\Debugging.dll
+C:\Users\serje\source\repos\MDFSJPGVSProyectoIPS\Debugging\obj\Debug\Debugging.pdb

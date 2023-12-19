@@ -12,9 +12,10 @@
 			enriquecida = "Enriquecido";
 		} 
 		fileManager.StartNewFile(clase.NombreClase + enriquecida + ".html");
-		htmlAlta(clase, enriquecida);
+		htmlHome(clase, enriquecida);
 
 		fileManager.StartNewFile(clase.NombreClase + enriquecida + "Alta" + ".html");
+		htmlAlta(clase, enriquecida);
 		
 		fileManager.StartNewFile(clase.NombreClase + enriquecida + "Listado" + ".html");
 
@@ -24,15 +25,14 @@
 #>
 
 <#+
-	
-	private void htmlAlta(Clase clase, String textoEnriquecido){
+	private void htmlHome(Clase clase, String textoEnriquecido){
 		WriteLine("<html>");
-		WriteLine("<head>");
-		WriteLine("<title>" + clase.NombreClase + "Home</title>");
-		WriteLine("</head>");
-		WriteLine("<body>");
-		WriteLine("<div style='border:1px solid black; margin:20px'>");
-		Write("<form name='" + clase.NombreClase + "'");
+		WriteLine("\t<head>");
+		WriteLine("\t\t<title>" + clase.NombreClase + "Home</title>");
+		WriteLine("\t</head>");
+		WriteLine("\t<body>");
+		WriteLine("\t\t<div style='border:1px solid black; margin:20px'>");
+		Write("\t\t<form name='" + clase.NombreClase + "'");
 		if(clase is ClaseEnriquecida){
 			ClaseEnriquecida claseE = (ClaseEnriquecida) clase;
 			EstiloClase estiloC = null;
@@ -50,21 +50,83 @@
 			String font = estiloC.TipoLetra.ToString();
 			String alineacion = estiloC.Alineacion.ToString();
 			Write("style='background-color:#" + colorFondo +";color:#" + colorLetra + ";font-family:" + font + ";text-align:" + alineacion + ";'>\n");
-			WriteLine("<h1>" + claseE.NombreClase + "</h1>");
+			WriteLine("\t\t\t<h1>" + claseE.NombreClase + "</h1>");
 			String colorButton = estiloO.ColorLetra;
 			String fontButton = estiloO.TipoLetra.ToString();
-			Write("<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=\"./" + claseE.NombreClase + textoEnriquecido + "Alta" +".html\">Alta</a> </button>\n");
-			Write("<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=\"./" + claseE.NombreClase + textoEnriquecido + "Listado" +".html\">Alta</a> </button>\n");
+			Write("\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=\"./" + claseE.NombreClase + textoEnriquecido + "Alta" +".html\">Alta</a> </button>\n");
+			Write("\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=\"./" + claseE.NombreClase + textoEnriquecido + "Listado" +".html\">Alta</a> </button>\n");
 		} else {
 			Write("style='background-color:#00aabb;color:#000000;font-family:Arial;text-align:center;'>\n");
-			WriteLine("<h1>" + clase.NombreClase + "</h1>");
-			Write("<button style='color:#000000;font-family:Arial'> <a href=\"./"  + clase.NombreClase + textoEnriquecido + "Alta" + "\">Alta</a> </button>\n");
-			Write("<button style='color:#000000;font-family:Arial'> <a href=\"./"  + clase.NombreClase + textoEnriquecido + "Listado" + "\">Alta</a> </button>\n");
+			WriteLine("\t\t\t<h1>" + clase.NombreClase + "</h1>");
+			Write("\t\t\t<button style='color:#000000;font-family:Arial'> <a href=\"./"  + clase.NombreClase + textoEnriquecido + "Alta" + "\">Alta</a> </button>\n");
+			Write("\t\t\t<button style='color:#000000;font-family:Arial'> <a href=\"./"  + clase.NombreClase + textoEnriquecido + "Listado" + "\">Alta</a> </button>\n");
 		}
-		WriteLine("</form>");
-		WriteLine("</div>");
-		WriteLine("</body>");
+		WriteLine("\t\t</form>");
+		WriteLine("\t\t</div>");
+		WriteLine("\t</body>");
 		WriteLine("</html>");
 	}
+#>
 
+<#+
+	private void htmlAlta(Clase clase, String textoEnriquecido){
+		WriteLine("<html>");
+		WriteLine("\t<head>");
+		WriteLine("\t\t<title>" + clase.NombreClase + "Alta</title>");
+		WriteLine("\t</head>");
+		WriteLine("\t<body>");
+		WriteLine("\t\t<div style='border:1px solid black; margin:20px'>");
+		if(clase is ClaseEnriquecida){
+			ClaseEnriquecida claseE = (ClaseEnriquecida) clase;
+			EstiloClase estiloC = null;
+			EstiloOperacion estiloO = null;
+			EstiloAtributo estiloA = null;
+			foreach (EstiloOperacion Eop in claseE.EstiloOperacioned){
+				if(Eop is EstiloClase){
+					estiloC = (EstiloClase) Eop;
+				}
+				if(Eop is EstiloAtributo){
+					estiloA = (EstiloAtributo) Eop;
+				}
+				if(Eop is EstiloOperacion){
+					estiloO = Eop;
+				}
+			}
+			String colorFondo = estiloC.ColorFondo;
+			String colorLetra = estiloC.ColorLetra;
+			String font = estiloC.TipoLetra.ToString();
+			String alineacion = estiloC.Alineacion.ToString();
+			WriteLine("\t\t<p style='background-color:#" + colorFondo +";color:#" + colorLetra + ";font-family:" + font + ";text-align:" + alineacion + "'> Alta "+ clase.NombreClase+"</p>");
+			Write("\t\t<form name='" + clase.NombreClase + "'");
+			Write("style='background-color:#" + colorFondo +";color:#" + colorLetra + ";font-family:" + font + ";text-align:" + alineacion + ";'>\n");
+			String colorA = estiloA.ColorLetra;
+			String fontA = estiloA.TipoLetra.ToString();
+			WriteLine("\t\t\t<table>");
+			foreach (Atributo atr in claseE.Atributo){
+				String nombreAtr = char.ToUpper(atr.Nombre.ToLower()[0]) + atr.Nombre.ToLower().Substring(1);
+				WriteLine("\t\t\t\t<tr><td style='color:#"+ colorA +";font-family:"+ fontA +";'>"+ nombreAtr +": <input type='text' id='"+ atr.Nombre +"'></td></tr>");
+			}
+			WriteLine("\t\t\t</table>");
+			String colorButton = estiloO.ColorLetra;
+			String fontButton = estiloO.TipoLetra.ToString();
+			Write("\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=\"./" + claseE.NombreClase + textoEnriquecido + ".html\">Guardar</a> </button>\n");
+			Write("\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=\"./" + claseE.NombreClase + textoEnriquecido + ".html\"> Volver</a> </button>\n");
+		} else {
+			WriteLine("\t\t<p style='background-color: #00aabb;color:#000000;font-weight:bold; font-family:Arial; text-align:center'> Alta "+ clase.NombreClase+"</p>");
+			Write("\t\t<form name='" + clase.NombreClase + "'");
+			Write("style='background-color:#00aabb;color:#000000;font-family:Arial;text-align:center;'>\n");
+			WriteLine("\t\t\t<table>");
+			foreach (Atributo atr in clase.Atributo){
+				String nombreAtr = char.ToUpper(atr.Nombre.ToLower()[0]) + atr.Nombre.ToLower().Substring(1);
+				WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>"+ nombreAtr +": <input type='text' id='"+ atr.Nombre +"'></td></tr>");
+			}
+			WriteLine("\t\t\t</table>");
+			Write("\t\t\t<button style='color:#000000;font-family:Arial'> <a href=\"./"  + clase.NombreClase + textoEnriquecido +  "\">Guardar</a> </button>\n");
+			Write("\t\t\t<button style='color:#000000;font-family:Arial'> <a href=\"./"  + clase.NombreClase + textoEnriquecido +  "\">Volver</a> </button>\n");
+		}
+		WriteLine("\t\t</form>");
+		WriteLine("\t\t</div>");
+		WriteLine("\t</body>");
+		WriteLine("</html>");
+	}
 #>

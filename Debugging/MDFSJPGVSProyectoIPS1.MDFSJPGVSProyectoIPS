@@ -67,7 +67,7 @@
             <estiloClase Id="c9c3b8fd-a55b-41ae-9804-db73a434920f" tipoLetra="Arial" colorLetra="0003b0" alineacion="center" colorFondo="0023b0" />
           </claseEnriquecidaHasEstiloOperacioned>
           <claseEnriquecidaHasEstiloOperacioned Id="767fb246-c370-4e8b-ade6-bb0c2c4b02c1">
-            <estiloAtributo Id="e2808ce5-13dc-4d99-a7f9-837ff1b9f329" tipoLetra="Arial" formato="Radiobutton" />
+            <estiloAtributo Id="e2808ce5-13dc-4d99-a7f9-837ff1b9f329" tipoLetra="Arial" colorLetra="0003b0" formato="Radiobutton" />
           </claseEnriquecidaHasEstiloOperacioned>
           <claseEnriquecidaHasEstiloOperacioned Id="56fca7cc-0f87-4406-a3e4-cd57c3bf874e">
             <estiloOperacion Id="338e6f28-4389-4934-afbf-1f34722a6d9e" tipoLetra="Arial" colorLetra="0023b0" />
@@ -133,6 +133,9 @@
         <estiloOperacioned>
           <claseEnriquecidaHasEstiloOperacioned Id="8cb4cb31-eac9-4a9f-a30b-da864d32f20c">
             <estiloClase Id="850bb886-0710-4648-a2cc-64dc90afd61f" tipoLetra="Italic" colorLetra="0003b0" alineacion="center" colorFondo="0021b9" />
+          </claseEnriquecidaHasEstiloOperacioned>
+          <claseEnriquecidaHasEstiloOperacioned Id="8eabf30f-932e-4b95-a21f-bc6584557a6e">
+            <estiloAtributo Id="1ef34ca3-3837-40c0-8ed4-61262157f579" tipoLetra="Arial" colorLetra="0003b0" formato="TextoNormal" />
           </claseEnriquecidaHasEstiloOperacioned>
         </estiloOperacioned>
       </claseEnriquecida>

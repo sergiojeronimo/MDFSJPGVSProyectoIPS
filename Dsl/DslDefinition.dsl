@@ -1154,13 +1154,13 @@
       <ElementTool Name="ClaseEnriquecidaTool" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="ClaseEnriquecidaTool" Tooltip="Crea una clase enriquecida" HelpKeyword="ClaseEnriquecidaTool">
         <DomainClassMoniker Name="ClaseEnriquecida" />
       </ElementTool>
-      <ElementTool Name="EstiloOperacionTool" ToolboxIcon="Resources\EstiloOperacion.bmp" Caption="EstiloOperacionTool" Tooltip="Crea un estilo de operacion dentro de una clase enriquecida" HelpKeyword="EstiloOperacionTool">
+      <ElementTool Name="EstiloOperacionTool" ToolboxIcon="Resources\Pedro.bmp" Caption="EstiloOperacionTool" Tooltip="Crea un estilo de operacion dentro de una clase enriquecida" HelpKeyword="EstiloOperacionTool">
         <DomainClassMoniker Name="EstiloOperacion" />
       </ElementTool>
-      <ElementTool Name="EstiloClaseTool" ToolboxIcon="Resources\EstiloClase.bmp" Caption="EstiloClaseTool" Tooltip="Crea un estilo de clase dentro de una clase enriquecida" HelpKeyword="EstiloClaseTool">
+      <ElementTool Name="EstiloClaseTool" ToolboxIcon="Resources\Pedro.bmp" Caption="EstiloClaseTool" Tooltip="Crea un estilo de clase dentro de una clase enriquecida" HelpKeyword="EstiloClaseTool">
         <DomainClassMoniker Name="EstiloClase" />
       </ElementTool>
-      <ElementTool Name="EstiloAtributoTool" ToolboxIcon="Resources\EstiloAtributo.bmp" Caption="EstiloAtributoTool" Tooltip="Crea un estilo de atributo dentro de una clase enriquecida" HelpKeyword="EstiloAtributoTool">
+      <ElementTool Name="EstiloAtributoTool" ToolboxIcon="Resources\Pedro.bmp" Caption="EstiloAtributoTool" Tooltip="Crea un estilo de atributo dentro de una clase enriquecida" HelpKeyword="EstiloAtributoTool">
         <DomainClassMoniker Name="EstiloAtributo" />
       </ElementTool>
       <ElementTool Name="AtributoClaseEnriquecidaTool" ToolboxIcon="Resources\Atributo.bmp" Caption="AtributoClaseEnriquecidaTool" Tooltip="Crea un Atributo dentro de una clase" HelpKeyword="AtributoClaseEnriquecidaTool">
