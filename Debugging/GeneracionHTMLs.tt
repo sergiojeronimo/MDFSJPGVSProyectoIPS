@@ -18,7 +18,7 @@
 		htmlAlta(clase, enriquecida);
 		
 		fileManager.StartNewFile(clase.NombreClase + enriquecida + "Listado" + ".html");
-
+		htmlListado(clase, enriquecida);
 	}
 	fileManager.Process();
 
@@ -129,4 +129,107 @@
 		WriteLine("\t</body>");
 		WriteLine("</html>");
 	}
+#>
+<#+
+private void htmlListado(Clase clase, String textoEnriquecido){
+	WriteLine("<html>");
+	WriteLine("\t<head>");
+	WriteLine("\t\t<title>" + clase.NombreClase + "Listado</title>");
+	WriteLine("\t</head>");
+	WriteLine("\t<body>");
+	WriteLine("\t\t<div style='border:1px solid black; margin:20px'>");
+	if(clase is ClaseEnriquecida){
+			ClaseEnriquecida claseE = (ClaseEnriquecida) clase;
+			EstiloClase estiloC = null;
+			EstiloOperacion estiloO = null;
+			EstiloAtributo estiloA = null;
+			foreach (EstiloOperacion Eop in claseE.EstiloOperacioned){
+				if(Eop is EstiloClase){
+					estiloC = (EstiloClase) Eop;
+				}
+				if(Eop is EstiloAtributo){
+					estiloA = (EstiloAtributo) Eop;
+				}
+				if(Eop is EstiloOperacion){
+					estiloO = Eop;
+				}
+			}
+			String colorFondo = estiloC.ColorFondo;
+			String colorLetra = estiloC.ColorLetra;
+			String font = estiloC.TipoLetra.ToString();
+			String alineacion = estiloC.Alineacion.ToString();
+			Write("\t\t<form name='" + clase.NombreClase + "'");
+			Write("style='background-color:#" + colorFondo +";color:#" + colorLetra + ";font-family:" + font + ";text-align:" + alineacion + ";'>\n");
+			WriteLine("\t\t\t<h2> Listado de" + clase.NombreClase + "</h2>");
+			WriteLine("\t\t\t<table>");
+			WriteLine("\t\t\t\t<tr>");
+			WriteLine("\t\t\t\t\t<td>"+ clase.NombreClase + " 1 </td>");
+			WriteLine("\t\t\t\t\t<td>");
+			String colorButton = estiloO.ColorLetra;
+			String fontButton = estiloO.TipoLetra.ToString();
+			Write("\t\t\t\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=" + claseE.NombreClase + textoEnriquecido + ".html>Consultar</a> </button>\n");
+			Write("\t\t\t\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=" + claseE.NombreClase + textoEnriquecido + ".html> Modificar</a> </button>\n");
+			Write("\t\t\t\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=" + claseE.NombreClase + textoEnriquecido + ".html>Eliminar</a> </button>\n");
+			foreach(Operacion opc in claseE.Operaciones){
+				Write("\t\t\t\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=" + claseE.NombreClase + textoEnriquecido + ".html>" + opc.Nombre + "</a> </button>\n");
+			}
+			WriteLine("\t\t\t\t\t</td>");
+			WriteLine("\t\t\t\t</tr>");
+			WriteLine("\t\t\t\t<tr><td> ... </td>");
+			WriteLine("\t\t\t</tr>");
+			WriteLine("\t\t\t<tr>");
+			WriteLine("\t\t\t\t\t<td>"+ clase.NombreClase + " N </td>");
+			WriteLine("\t\t\t\t\t<td>");
+			Write("\t\t\t\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=" + claseE.NombreClase + textoEnriquecido + ".html>Consultar</a> </button>\n");
+			Write("\t\t\t\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=" + claseE.NombreClase + textoEnriquecido + ".html> Modificar</a> </button>\n");
+			Write("\t\t\t\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=" + claseE.NombreClase + textoEnriquecido + ".html>Eliminar</a> </button>\n");
+			foreach(Operacion opc in claseE.Operaciones){
+				Write("\t\t\t\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=" + claseE.NombreClase + textoEnriquecido + ".html>" + opc.Nombre + "</a> </button>\n");
+			}
+			WriteLine("\t\t\t\t\t</td>");
+			WriteLine("\t\t\t\t</tr>");
+			WriteLine("\t\t\t</table>");
+			Write("\t\t\t<button style='color:#" + colorButton + ";font-family:" + fontButton + "'> <a href=" + claseE.NombreClase + textoEnriquecido + ".html>Consultar</a> </button>\n");
+			
+		} else {
+			Write("\t\t<form name='" + clase.NombreClase + "' ");
+			Write("style='background-color:#00aabb;color:#000000;font-family:Arial;text-align:center;'>\n");
+			WriteLine("\t\t\t<h2> Listado de" + clase.NombreClase + "</h2>");
+			WriteLine("\t\t\t<table>");
+			WriteLine("\t\t\t\t<tr>");
+			WriteLine("\t\t\t\t\t<td>"+ clase.NombreClase + " 1 </td>");
+			WriteLine("\t\t\t\t\t<td>");
+			Write("\t\t\t\t\t\t<button style='color:#000000;font-family:Arial'> <a href=" + clase.NombreClase + textoEnriquecido + ".html>Consultar</a> </button>\n");
+			Write("\t\t\t\t\t\t<button style='color:#000000;font-family:Arial'> <a href=" + clase.NombreClase + textoEnriquecido + ".html>Modificar</a> </button>\n");
+			Write("\t\t\t\t\t\t<button style='color:#000000;font-family:Arial'> <a href=" + clase.NombreClase + textoEnriquecido + ".html>Eliminar</a> </button>\n");
+			foreach(Operacion opc in clase.Operaciones){
+				Write("\t\t\t\t\t\t<button style='color:#000000;font-family:Arial'> <a href=" + clase.NombreClase + textoEnriquecido + ".html>" + opc.Nombre + "</a> </button>\n");
+			}
+			WriteLine("\t\t\t\t\t</td>");
+			WriteLine("\t\t\t\t</tr>");
+			WriteLine("\t\t\t\t<tr><td> ... </td>");
+			WriteLine("\t\t\t</tr>");
+			WriteLine("\t\t\t<tr>");
+			WriteLine("\t\t\t\t\t<td>"+ clase.NombreClase + " N </td>");
+			WriteLine("\t\t\t\t\t<td>");
+			Write("\t\t\t\t\t\t<button style='color:#000000;font-family:Arial'> <a href=" + clase.NombreClase + textoEnriquecido + ".html>Consultar</a> </button>\n");
+			Write("\t\t\t\t\t\t<button style='color:#000000;font-family:Arial'> <a href=" + clase.NombreClase + textoEnriquecido + ".html>Modificar</a> </button>\n");
+			Write("\t\t\t\t\t\t<button style='color:#000000;font-family:Arial'> <a href=" + clase.NombreClase + textoEnriquecido + ".html>Eliminar</a> </button>\n");
+			Write("\t\t\t\t\t\t<button style='color:#000000;font-family:Arial'> <a href=" + clase.NombreClase + textoEnriquecido + ".html>Consultar</a> </button>\n");
+			Write("\t\t\t\t\t\t<button style='color:#000000;font-family:Arial'> <a href=" + clase.NombreClase + textoEnriquecido + ".html>Modificar</a> </button>\n");
+			foreach(Operacion opc in clase.Operaciones){
+				Write("\t\t\t\t\t\t<button style='color:#000000;font-family:Arial'> <a href=" + clase.NombreClase + textoEnriquecido + ".html>" + opc.Nombre + "</a> </button>\n");
+			}
+			WriteLine("\t\t\t\t\t</td>");
+			WriteLine("\t\t\t\t</tr>");
+			WriteLine("\t\t\t</table>");
+			Write("\t\t\t<button style='color:#000000;font-family:Arial'> <a href="  + clase.NombreClase + textoEnriquecido +  ".html>Volver</a> </button>\n");
+			
+		}
+		WriteLine("\t\t</form>");
+		WriteLine("\t\t</div>");
+		WriteLine("\t</body>");
+		WriteLine("</html>");
+}
+
 #>
