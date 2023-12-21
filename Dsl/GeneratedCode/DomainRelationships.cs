@@ -1846,7 +1846,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 	[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(AllowsDuplicates = true)]
+	[DslModeling::DomainRelationship()]
 	[DslModeling::DomainObjectId("b74dedc5-830c-4a5c-85f8-b43141093493")]
 	public partial class Herencia : DslModeling::ElementLink
 	{
@@ -1924,7 +1924,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.MDFSJPGVSProyectoIPS.Herencia/SourceClase.DisplayName", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MDFSJPGVSProyectoIPS.Herencia/SourceClase.Description", typeof(global::UPM_IPS.MDFSJPGVSProyectoIPS.MDFSJPGVSProyectoIPSDomainModel), "UPM_IPS.MDFSJPGVSProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClasePadre", PropertyDisplayNameKey="UPM_IPS.MDFSJPGVSProyectoIPS.Herencia/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClasePadre", PropertyDisplayNameKey="UPM_IPS.MDFSJPGVSProyectoIPS.Herencia/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("b3f002b2-cd05-4c30-8005-d0a181a77e65")]
 		public virtual Clase SourceClase
 		{
@@ -1984,13 +1984,23 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		#endregion
 		#region Static methods to access ClasePadre of a Clase
 		/// <summary>
-		/// Gets a list of ClasePadre.
+		/// Gets ClasePadre.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetClasePadre(Clase element)
+		public static Clase GetClasePadre(Clase element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, SourceClaseDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, SourceClaseDomainRoleId) as Clase;
+		}
+		
+		/// <summary>
+		/// Sets ClasePadre.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClasePadre(Clase element, Clase newTargetClase)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, SourceClaseDomainRoleId, newTargetClase);
 		}
 		#endregion
 		#region TipoHerencia domain property code
@@ -2169,13 +2179,22 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		#endregion
 		#region SourceClase link accessor
 		/// <summary>
-		/// Get the list of Herencia links to a Clase.
+		/// Get the Herencia link to a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia> GetLinksToClasePadre ( global::UPM_IPS.MDFSJPGVSProyectoIPS.Clase sourceClaseInstance )
+		public static global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia GetLinkToClasePadre (global::UPM_IPS.MDFSJPGVSProyectoIPS.Clase sourceClaseInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia>(sourceClaseInstance, global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.SourceClaseDomainRoleId);
+			global::System.Collections.Generic.IList<global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia>(sourceClaseInstance, global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.SourceClaseDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of SourceClase not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region TargetClase link accessor
@@ -2209,6 +2228,24 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			}
 			return outLinks.AsReadOnly();
 		}
+		/// <summary>
+		/// Get the one Herencia link between a given Claseand a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia GetLink( global::UPM_IPS.MDFSJPGVSProyectoIPS.Clase source, global::UPM_IPS.MDFSJPGVSProyectoIPS.Clase target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia>(source, global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.SourceClaseDomainRoleId);
+			foreach ( global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia link in links )
+			{
+				if ( target.Equals(link.TargetClase) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
 		#endregion
 	}
 }

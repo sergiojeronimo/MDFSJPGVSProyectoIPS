@@ -1055,7 +1055,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 						else
 						{
 							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <clasePadre>
-							ReadHerenciaInstances(serializationContext, element, reader);
+							ReadHerenciaInstance(serializationContext, element, reader);
 							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </clasePadre>
 						}
 						break;
@@ -1203,19 +1203,26 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		}
 	
 		/// <summary>
-		/// Reads all instances of relationship Herencia.
+		/// Reads instance of relationship Herencia.
 		/// </summary>
 		/// <remarks>
 		/// The caller will position the reader at the open tag of the first XML element inside the relationship tag, so it can be
-		/// either the first instance, or a bogus tag. This method will deserialize all instances and ignore all bogus tags. When the
-		/// method returns, the reader will be positioned at the end tag of the relationship (or EOF if somehow that happens).
+		/// either the first instance, or a bogus tag. This method will deserialize only the first valid instance and ignore all the
+		/// rest tags (because the multiplicity allows only one instance). When the method returns, the reader will be positioned at 
+		/// the end tag of the relationship (or EOF if somehow that happens).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="element">In-memory Clase instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1806")]
-		private static void ReadHerenciaInstances(DslModeling::SerializationContext serializationContext, Clase element, global::System.Xml.XmlReader reader)
+		private static void ReadHerenciaInstance(DslModeling::SerializationContext serializationContext, Clase element, global::System.Xml.XmlReader reader)
 		{
+			if (DslModeling::DomainRoleInfo.GetElementLinks<Herencia> (element, Herencia.SourceClaseDomainRoleId).Count > 0)
+			{	// Only allow one instance, which already exists, so skip everything
+				DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
+				return;
+			}
+	
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
 				DslModeling::DomainClassXmlSerializer newHerenciaSerializer = serializationContext.Directory.GetSerializer(Herencia.DomainClassId);
@@ -1227,6 +1234,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newHerencia.GetDomainClass().Id);	
 					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newHerencia.GetDomainClass().Name + "!");
 					targetSerializer.Read(serializationContext, newHerencia, reader);
+					break;	// Only allow one instance.
 				}
 				else
 				{	// Maybe the relationship is serialized in short-form by mistake.
@@ -1238,6 +1246,7 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 						MDFSJPGVSProyectoIPSSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(Herencia));
 						new Herencia(element.Partition, new DslModeling::RoleAssignment(Herencia.SourceClaseDomainRoleId, element), new DslModeling::RoleAssignment(Herencia.TargetClaseDomainRoleId, newClaseMonikerOfHerencia));
 						DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
+						break;	// Only allow one instance.
 					}
 					else
 					{	// Unknown element, skip.
@@ -1742,19 +1751,13 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 			}
 	
 			// Herencia
-			global::System.Collections.ObjectModel.ReadOnlyCollection<Herencia> allHerenciaInstances = Herencia.GetLinksToClasePadre(element);
-			if (!serializationContext.Result.Failed && allHerenciaInstances.Count > 0)
+			Herencia theHerenciaInstance = Herencia.GetLinkToClasePadre(element);
+			if (!serializationContext.Result.Failed && theHerenciaInstance != null)
 			{
 				writer.WriteStartElement("clasePadre");
-				foreach (Herencia eachHerenciaInstance in allHerenciaInstances)
-				{
-					if (serializationContext.Result.Failed)
-						break;
-	
-					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachHerenciaInstance.GetDomainClass().Id);
-					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachHerenciaInstance.GetDomainClass().Name + "!");
-					relSerializer.Write(serializationContext, eachHerenciaInstance, writer);
-				}
+				DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(theHerenciaInstance.GetDomainClass().Id);
+				global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + theHerenciaInstance.GetDomainClass().Name + "!");
+				relSerializer.Write(serializationContext, theHerenciaInstance, writer);
 				writer.WriteEndElement();
 			}
 	

@@ -1,5 +1,4 @@
-public class Cancion {
- {
+public  class Cancion {
 	private String titulo;
 	private int id;
 

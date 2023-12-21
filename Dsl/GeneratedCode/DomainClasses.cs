@@ -583,17 +583,21 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 		}
 		#endregion
 		#region ClasePadre opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of ClasePadre.
+		/// Gets or sets ClasePadre.
 		/// Description for UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.SourceClase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> ClasePadre
+		public virtual Clase ClasePadre
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.SourceClaseDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.SourceClaseDomainRoleId) as Clase;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.SourceClaseDomainRoleId, value);
 			}
 		}
 		#endregion

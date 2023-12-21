@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<mDFSJPGVSProyectoIPSDiagram dslVersion="1.0.0.0" Id="5aaef940-68d3-44be-abfb-f2faeccf2fae" absoluteBounds="0, 0, 18.75, 12.375" name="MDFSJPGVSProyectoIPS1">
+<mDFSJPGVSProyectoIPSDiagram dslVersion="1.0.0.0" Id="5aaef940-68d3-44be-abfb-f2faeccf2fae" absoluteBounds="0, 0, 20.25, 12.375" name="MDFSJPGVSProyectoIPS1">
   <tapizDiagramaClasesMoniker Id="63b6ed34-e631-4654-867e-ec188fa33b32" />
   <nestedChildShapes>
     <metaforaClase Id="16194ea1-9799-4de7-9895-fc4f8cd5d1ac" absoluteBounds="8.75, 3.125, 2.25, 2">
@@ -130,7 +130,7 @@
         </metaforaEstiloAtributo>
       </nestedChildShapes>
     </metaforaClaseEnriquecida>
-    <metaforaAsociacion Id="d82a01b4-7256-4cd7-93fe-79450f3b9b2a" edgePoints="[(11.1875 : 7); (11.1875 : 8.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaAsociacion Id="d82a01b4-7256-4cd7-93fe-79450f3b9b2a" edgePoints="[(11.1875 : 7); (11.1875 : 8.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <asociacionMoniker Id="3ddf95fe-a5fd-4eea-a2ea-8b81e6a581ca" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
@@ -163,5 +163,29 @@
         <metaforaClaseMoniker Id="ff7d2459-d9bf-4b7e-862b-b8ff0da3a508" />
       </nodes>
     </metaforaAsociacion>
+    <metaforaClase Id="20ca1b38-b323-4bd0-a37a-7da03a1e8a31" absoluteBounds="17.25, 6.125, 2.75, 1.5">
+      <claseMoniker Id="22ac2afa-8d9a-4c9d-ae5d-8aac9276609b" />
+      <nestedChildShapes>
+        <metaforaAtributo Id="3cc95a98-e20b-457f-8df4-4a2169593eb2" absoluteBounds="17.375, 6.5, 2.5, 0.25">
+          <atributoMoniker Id="977fcd46-d39c-4f6f-bd56-9ec238bc112e" />
+        </metaforaAtributo>
+        <metaforaOperacion Id="09938cbb-e0bb-4604-aaa2-38c478664cfb" absoluteBounds="17.375, 6.875, 2.5, 0.625">
+          <operacionMoniker Id="9e7e00bc-1804-4dba-884e-111c485f4d5b" />
+          <nestedChildShapes>
+            <metaforaParametro Id="23ef75cb-8c3a-481a-863b-274c4c28e555" absoluteBounds="17.5, 7.125, 2.25, 0.25">
+              <parametroMoniker Id="b98bd702-e617-4f65-81e1-ca0da1d68609" />
+            </metaforaParametro>
+          </nestedChildShapes>
+        </metaforaOperacion>
+      </nestedChildShapes>
+    </metaforaClase>
+    <metaforaHerencia Id="399ecaff-7eca-402f-8aa8-e2d722a1dafe" edgePoints="[(17.875 : 6.125); (17.875 : 5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <herenciaMoniker Id="7467f293-6dc6-4ed7-93f9-8b3314c3814e" />
+      <relativeChildShapes />
+      <nodes>
+        <metaforaClaseMoniker Id="20ca1b38-b323-4bd0-a37a-7da03a1e8a31" />
+        <metaforaClaseMoniker Id="ff7d2459-d9bf-4b7e-862b-b8ff0da3a508" />
+      </nodes>
+    </metaforaHerencia>
   </nestedChildShapes>
 </mDFSJPGVSProyectoIPSDiagram>

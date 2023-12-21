@@ -356,7 +356,7 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="b74dedc5-830c-4a5c-85f8-b43141093493" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.Herencia" Name="Herencia" DisplayName="Herencia" Namespace="UPM_IPS.MDFSJPGVSProyectoIPS" AllowsDuplicates="true">
+    <DomainRelationship Id="b74dedc5-830c-4a5c-85f8-b43141093493" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.Herencia" Name="Herencia" DisplayName="Herencia" Namespace="UPM_IPS.MDFSJPGVSProyectoIPS">
       <Properties>
         <DomainProperty Id="9316119c-6836-41d0-b0a4-08aac46a0eac" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.Tipo Herencia" Name="TipoHerencia" DisplayName="Tipo Herencia">
           <Type>
@@ -370,7 +370,7 @@
         </DomainProperty>
       </Properties>
       <Source>
-        <DomainRole Id="b3f002b2-cd05-4c30-8005-d0a181a77e65" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="ClasePadre" PropertyDisplayName="Clase Padre">
+        <DomainRole Id="b3f002b2-cd05-4c30-8005-d0a181a77e65" Description="Description for UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="ClasePadre" Multiplicity="One" PropertyDisplayName="Clase Padre">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>

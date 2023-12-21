@@ -9,17 +9,12 @@ var fileManager=EntityFrameworkTemplateFileManager.Create(this);
 foreach (Clase clase in this.TapizDiagramaClases.Clases) {
 	fileManager.StartNewFile(clase.NombreClase + ".java");
 	if(clase.ClaseHija.Count > 0){
-		WriteLine("public abstract class " + clase.NombreClase + " {");
+		String tipo = Herencia.GetLinkToClasePadre(clase.ClaseHija[0]).TipoHerencia.ToString() == "Total" ? "abstract":"";
+		WriteLine("public " + tipo + " class " + clase.NombreClase + " {");
 	} else {
-		if(clase.ClasePadre.Count > 0){
+		if(clase.ClasePadre != null){
 			Write("public class " + clase.NombreClase + " extends ");
-			foreach (Clase clasePadre in clase.ClasePadre){
-				if(clasePadre.Equals(clase.ClasePadre[clase.ClasePadre.Count - 1])){
-					Write(clasePadre.NombreClase);
-				} else {
-					Write(clasePadre.NombreClase + ", ");
-				}
-			}
+			Write(clase.ClasePadre.NombreClase);
 		} else {
 			WriteLine("public class " + clase.NombreClase + " {");
 		}

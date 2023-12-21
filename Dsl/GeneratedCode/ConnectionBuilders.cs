@@ -468,6 +468,10 @@ namespace UPM_IPS.MDFSJPGVSProyectoIPS
 				{
 					if (candidateTarget is global::UPM_IPS.MDFSJPGVSProyectoIPS.Clase)
 					{
+						global::UPM_IPS.MDFSJPGVSProyectoIPS.Clase sourceClase = (global::UPM_IPS.MDFSJPGVSProyectoIPS.Clase)candidateSource;
+						global::UPM_IPS.MDFSJPGVSProyectoIPS.Clase targetClase = (global::UPM_IPS.MDFSJPGVSProyectoIPS.Clase)candidateTarget;
+						if(sourceClase == null || global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.GetLinkToClasePadre(sourceClase) != null) return false;
+						if(targetClase == null || sourceClase == null || global::UPM_IPS.MDFSJPGVSProyectoIPS.Herencia.GetLinks(sourceClase, targetClase).Count > 0) return false;
 						return true;
 					}
 				}

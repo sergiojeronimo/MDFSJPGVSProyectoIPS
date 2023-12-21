@@ -69,6 +69,33 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="%28R%29Compuesta.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="%28R%29CompuestaAlta.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="%28R%29CompuestaListado.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="%28R%29Escucha.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="%28R%29EscuchaAlta.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="%28R%29EscuchaListado.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="%28R%29Recibe.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="%28R%29RecibeAlta.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="%28R%29RecibeListado.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
     <Content Include="Anuncio.java">
       <DependentUpon>GeneracionClases.tt</DependentUpon>
     </Content>
@@ -93,8 +120,17 @@
     <Content Include="CancionListado.html">
       <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
     </Content>
-    <Content Include="Cuota.java">
+    <Content Include="CancionPremium.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="CancionPremium.java">
       <DependentUpon>GeneracionClases.tt</DependentUpon>
+    </Content>
+    <Content Include="CancionPremiumAlta.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
+    </Content>
+    <Content Include="CancionPremiumListado.html">
+      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
     </Content>
     <Content Include="GeneracionClases.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -136,6 +172,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MDFSJPGVSProyectoIPSReportVB.tt</DependentUpon>
     </Content>
+    <Content Include="Plan.java">
+      <DependentUpon>GeneracionClases.tt</DependentUpon>
+    </Content>
     <Content Include="PlanEnriquecido.html">
       <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
     </Content>
@@ -169,17 +208,8 @@
     <Content Include="StandardListado.html">
       <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
     </Content>
-    <Content Include="Usuario.html">
-      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
-    </Content>
     <Content Include="Usuario.java">
       <DependentUpon>GeneracionClases.tt</DependentUpon>
-    </Content>
-    <Content Include="UsuarioAlta.html">
-      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
-    </Content>
-    <Content Include="UsuarioListado.html">
-      <DependentUpon>GeneracionHTMLs.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

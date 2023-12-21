@@ -140,5 +140,30 @@
         </estiloOperacioned>
       </claseEnriquecida>
     </tapizDiagramaClasesHasClases>
+    <tapizDiagramaClasesHasClases Id="5f0edd09-61ce-4d36-8c1b-77b6bf761c2e">
+      <clase Id="22ac2afa-8d9a-4c9d-ae5d-8aac9276609b" nombreClase="CancionPremium">
+        <atributo>
+          <claseHasAtributo Id="1f647c6d-d79a-4df2-bb5d-76d70b446257">
+            <atributo Id="977fcd46-d39c-4f6f-bd56-9ec238bc112e" nombre="minutosDeOro" tipoDato="Int" tipoPrivatePublicProtected="Public" />
+          </claseHasAtributo>
+        </atributo>
+        <operaciones>
+          <claseHasOperaciones Id="f26f22d0-2e05-472d-a42e-93d5279268d4">
+            <operacion Id="9e7e00bc-1804-4dba-884e-111c485f4d5b" nombre="compartir" tipoPrivatePublicProtected="Public" tipoDato="Boolean">
+              <parametros>
+                <operacionHasParametros Id="753b603a-c569-4134-a9a7-efc7bf402cf2">
+                  <parametro Id="b98bd702-e617-4f65-81e1-ca0da1d68609" tipoEntradaSalida="Entrada" nombre="nombreUsuario" tipoDatoParametro="String" />
+                </operacionHasParametros>
+              </parametros>
+            </operacion>
+          </claseHasOperaciones>
+        </operaciones>
+        <clasePadre>
+          <herencia Id="7467f293-6dc6-4ed7-93f9-8b3314c3814e" tipoHerencia="Parcial" tipoHijos="Solapada">
+            <claseMoniker Id="9899c018-8347-4c55-b470-08919b5b79ec" />
+          </herencia>
+        </clasePadre>
+      </clase>
+    </tapizDiagramaClasesHasClases>
   </clases>
 </tapizDiagramaClases>

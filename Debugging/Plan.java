@@ -1,9 +1,9 @@
-public class Cuota {
+public class Plan {
  {
 	private float importe;
 	private int id;
 
-	public Cuota() {
+	public Plan() {
 	}
 
 	public float getImporte() {
